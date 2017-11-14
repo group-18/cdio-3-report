@@ -1,34 +1,37 @@
 \chapter{Projektplanlægning}
 
-Diagrammet herunder er inddelt i dage indtil aflevering indelt i 18 dage. 
-\\ Diagrammet viser den planlagte tid, vi lagde fra start af projektet.
+Diagrammet herunder er inddelt i dage indtil aflevering indelt i 19 dage.
+\\Diagrammet viser reelle datoer fra d. 13 november 2017 til og med d. 1 december 2017. Diagrammet viser den planlagte tid, vi lagde fra start af projektet.
 %
 %   GANTT DIAGRAM 1
 %
 \begin{center}
     \begin{ganttchart}[
-        canvas/.append style={fill=none, draw=black!10, line width=2pt},
-        hgrid style/.style={draw=black!10, line width=2pt},
-        vgrid={*1{draw=black!10, line width=1pt}},
+        canvas/.append style={
+            fill=black!5, draw=black!40, line width=2pt},
+        hgrid style/.style={draw=black!20, line width=1.5pt},
+        vgrid={*1{draw=black!20, line width=1.5pt}},
         title/.style={draw=none, fill=none},
         title label font=\bfseries\footnotesize,
         title label node/.append style={below=.3pt},
         include title in canvas=false,
-        bar label font=\mdseries\small\color{black!70},
-        bar label node/.append style={left=2pt},
-        bar/.append style={draw=none, fill=black!50},
+        bar label font=\mdseries\small\color{black!60},
+        bar label node/.append style={left=5pt},
+        bar height=.25pt,
+        bar/.append style={draw=none, fill=black!60},
         bar incomplete/.append style={fill=barblue},
-        bar progress label font=\mdseries\footnotesize\color{black!70},
+        bar progress label font=\mdseries\footnotesize\color{black!80},
         group incomplete/.append style={fill=groupblue},
         group left shift=0,
         group right shift=0,
-        group height=.3pt,
+        group height=.25pt,
         group peaks tip position=0,
         group label node/.append style={left=.3cm},
+        group/.append style={draw=none, fill=black},
         group progress label font=\bfseries\small,
         link/.style={-latex, line width=1.5pt, linkred},
         link label font=\scriptsize\bfseries,
-      ]{1}{18}
+      ]{13}{32}
 
       %
       % Ganttgroup laver den store fyldige overgruppe
@@ -36,63 +39,69 @@ Diagrammet herunder er inddelt i dage indtil aflevering indelt i 18 dage.
       % De tal der er ude i siden skriver man fra og til i.
       %
 
-      \gantttitlelist{1,...,18}{1}                                    \\
-      
-              \ganttgroup {\underline{Analyse/planlægning -}} {1}{4}      \\
-              \ganttbar   {Krav/opgaveanalyse}                {1}{4}      \\
-              \ganttbar   {Projektopsætning     }             {1}{1}      \\
-              \ganttbar   {Tildeling af opgaver}              {2}{2}      \\
-              \ganttgroup {\underline{Rapport -}}             {3}{18}     \\
-              \ganttbar   {Analyse}                           {3}{7}      \\
-              \ganttbar   {Design}                            {8}{10}     \\
-              \ganttbar   {Test og implementering}            {6}{11}     \\
-              \ganttbar   {Projektplanlægning}                {1}{3}
-              \ganttbar   {}                                  {15}{16}    \\
-              \ganttbar   {Konklusion}                        {17}{17}    \\
-              \ganttbar   {Abstract}                          {18}{18}    \\
-              \ganttgroup {\underline{Programmering -}}       {4}{13}     \\
-              \ganttbar   {Programmering}                     {4}{6}
-              \ganttbar   {}                                  {10}{12}
-              \ganttbar   {}                                  {16}{17}
+      \gantttitlelist{13,...,30,,1}{1} \\
+              \ganttgroup {\underline{
+              Analyse, design \& rapport}}                    {13}{24}    \\
+              %\ganttgroup {\underline{\quad \quad 
+              %Analyse/planlægning \quad}}                    {13}{16}    \\
+              \ganttbar   {Projektopsætning}                  {13}{13}    \\
+              \ganttbar   {Projektplanlægning}                {13}{14}
+              \ganttbar   {}                                  {23}{23}    \\
+              \ganttbar   {Problemformulering}                {13}{16}    \\
+              \ganttbar   {Krav \& Analyse}                   {15}{16}    \\
+              \ganttbar   {Design}                            {17}{17}    \\
+              \ganttbar   {Implementering}                    {18}{19}    \\
+              \ganttbar   {Abstract}                          {23}{23}    \\
+              \ganttbar   {Konklusion}                        {24}{24}    \\
+              \ganttgroup {\underline{ \  \quad \quad \quad \quad 
+              Code \quad \quad  \quad \quad \ }}              {18}{22}    \\
+              \ganttbar   {Programmering}                     {18}{18}
+              \ganttbar   {}                                  {20}{20}
+              \ganttbar   {}                                  {22}{22}
               \\
-              \ganttbar   {Test og forbedring}                {7}{9}
-              \ganttbar   {}                                  {13}{15}
-          \end{ganttchart}
-      \end{center}
+              \ganttbar   {Test og forbedring}                {19}{19}
+              \ganttbar   {}                                  {21}{21}
+              \\
+              \ganttbar   {Dokumentation}                     {23}{24}
+        \end{ganttchart}
+    \end{center}
 
 \pagebreak
 
 \noindent
-Diagrammet herunder er inddelt i dage indtil aflevering indelt i 18 dage. 
-\\ Diagrammet viser den reelle tid brugt på projektet.
+Diagrammet herunder er inddelt i dage indtil aflevering indelt i 19 dage. 
+\\Diagrammet viser reelle datoer fra d. 13 november 2017 til og med d. 1 december 2017. Diagrammet viser den reelle tid brugt på projektet.
     
 %
 %   GANTT DIAGRAM 2
 %
 \begin{center}
     \begin{ganttchart}[
-        canvas/.append style={fill=none, draw=black!10, line width=2pt},
-        hgrid style/.style={draw=black!10, line width=2pt},
-        vgrid={*1{draw=black!10, line width=1pt}},
-        title/.style={draw=none, fill=none},
-        title label font=\bfseries\footnotesize,
-        title label node/.append style={below=.3pt},
-        include title in canvas=false,
-        bar label font=\mdseries\small\color{black!70},
-        bar label node/.append style={left=2pt},
-        bar/.append style={draw=none, fill=black!50},
-        bar incomplete/.append style={fill=barblue},
-        bar progress label font=\mdseries\footnotesize\color{black!70},
-        group incomplete/.append style={fill=groupblue},
-        group left shift=0,
-        group right shift=0,
-        group height=.3pt,
-        group peaks tip position=0,
-        group label node/.append style={left=.3cm},
-        group progress label font=\bfseries\small,
-        link/.style={-latex, line width=1.5pt, linkred},
-        link label font=\scriptsize\bfseries,
-      ]{1}{18}
+            canvas/.append style={
+                fill=black!5, draw=black!40, line width=2pt},
+            hgrid style/.style={draw=black!20, line width=1.5pt},
+            vgrid={*1{draw=black!20, line width=1.5pt}},
+            title/.style={draw=none, fill=none},
+            title label font=\bfseries\footnotesize,
+            title label node/.append style={below=.3pt},
+            include title in canvas=false,
+            bar label font=\mdseries\small\color{black!60},
+            bar label node/.append style={left=5pt},
+            bar height=.25pt,
+            bar/.append style={draw=none, fill=black!60},
+            bar incomplete/.append style={fill=barblue},
+            bar progress label font=\mdseries\footnotesize\color{black!80},
+            group incomplete/.append style={fill=groupblue},
+            group left shift=0,
+            group right shift=0,
+            group height=.25pt,
+            group peaks tip position=0,
+            group label node/.append style={left=.3cm},
+            group/.append style={draw=none, fill=black},
+            group progress label font=\bfseries\small,
+            link/.style={-latex, line width=1.5pt, linkred},
+            link label font=\scriptsize\bfseries,
+        ]{13}{32}
 
         %
         % Ganttgroup laver den store fyldige overgruppe
@@ -100,28 +109,29 @@ Diagrammet herunder er inddelt i dage indtil aflevering indelt i 18 dage.
         % De tal der er ude i siden skriver man fra og til i.
         %
 
-        \gantttitlelist{1,...,18}{1}                                    \\
-        
-                \ganttgroup {\underline{Analyse/planlægning -}} {1}{1}      \\
-                \ganttbar   {Krav/opgaveanalyse}                {1}{1}      \\
-                \ganttbar   {Projektopsætning     }             {1}{1}      \\
-                \ganttbar   {Tildeling af opgaver}              {1}{1}      \\
-                \ganttgroup {\underline{Rapport -}}             {1}{1}     \\
-                \ganttbar   {Analyse}                           {1}{1}      \\
-                \ganttbar   {Design}                            {1}{1}     \\
-                \ganttbar   {Test og implementering}            {1}{1}
-                \ganttbar   {}                                  {1}{1}
-                 \\
-                \ganttbar   {Projektplanlægning}                {1}{1}
-                \ganttbar   {}                                  {1}{1}    \\
-                \ganttbar   {Konklusion}                        {1}{1}    \\
-                \ganttbar   {Abstract}                          {1}{1}    \\
-                \ganttgroup {\underline{Programmering -}}       {1}{1}     \\
-                \ganttbar   {Programmering}                     {1}{1}
-                \ganttbar   {}                                  {1}{1}
-                \ganttbar   {}                                  {1}{1}
-                \\
-                \ganttbar   {Test og forbedring}                {1}{1}
-                \ganttbar   {}                                  {1}{1}
-            \end{ganttchart}
-        \end{center}
+    \gantttitlelist{13,...,30,,1}{1} \\
+        \ganttgroup {\underline{
+        Analyse, design \& rapport}}                    {13}{24}    \\
+        %\ganttgroup {\underline{\quad \quad 
+        %Analyse/planlægning \quad}}                    {13}{16}    \\
+        \ganttbar   {Projektopsætning}                  {13}{13}    \\
+        \ganttbar   {Projektplanlægning}                {13}{14}
+        \ganttbar   {}                                  {23}{23}    \\
+        \ganttbar   {Problemformulering}                {13}{16}    \\
+        \ganttbar   {Krav \& Analyse}                   {15}{16}    \\
+        \ganttbar   {Design}                            {17}{17}    \\
+        \ganttbar   {Implementering}                    {18}{19}    \\
+        \ganttbar   {Abstract}                          {23}{23}    \\
+        \ganttbar   {Konklusion}                        {24}{24}    \\
+        \ganttgroup {\underline{ \  \quad \quad \quad \quad 
+        Code \quad \quad  \quad \quad \ }}              {18}{22}    \\
+        \ganttbar   {Programmering}                     {18}{18}
+        \ganttbar   {}                                  {20}{20}
+        \ganttbar   {}                                  {22}{22}
+        \\
+        \ganttbar   {Test og forbedring}                {19}{19}
+        \ganttbar   {}                                  {21}{21}
+        \\
+        \ganttbar   {Dokumentation}                     {23}{24}
+    \end{ganttchart}
+\end{center}
