@@ -9,6 +9,39 @@ I dette kapitel vil vi gennemgå kravspecifikation til programmet, samt optegne 
 
 \section{Interessentanalyse}
 
+\newpage
+
+\section{Use case}
+
+Følgende er en liste over use cases samt deres beskrivelser i en brief udgave.
+
+%\footnote{Use case modellen i tabel 3.1 er en revideret udgave af use case modellen fra CDIO 1 da vi har at gøre med en magen til konfiguration.}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{ | p{15cm} |}
+            \hline
+            \textbf{Use case:} PlayGame \\ \hline
+            \textbf{ID:} UC1 \\ \hline
+            \textbf{Brief description} Spiller/-e skal kunne spille spil/Game (starte spillet) og slå med to terninger     \\ \hline
+            \textbf{Primary actors:} Spiller/-e \\ \hline
+            \textbf{Secondary actors:} Ingen. \\ \hline
+            \textbf{Preconditions:} Ingen.     \\ \hline
+            \textbf{Main flow:}
+            \begin{enumerate}
+                \item \textbf{Antal spillerer indtastes (minimum 2 og maksimum 6 spillerer) og tildeles 30.000 i pengebeholdning.}
+                \item \textbf{Spillerer slår med to terninger, lander på et felt mellem 1-21 og bliver udefra det tildelt en opdateret pengebeholdning.}
+                \item \textbf{Spillet slutter når alle, på nær én spiller, er bankerot.}
+            \end{enumerate} \\ \hline
+            \textbf{Postconditions:} Ingen.\\ \hline
+            \textbf{Alternative flow:} Ingen.\\ \hline
+            \hline
+        \end{tabular}
+        \caption{Use case 1}
+        \label{usecase:1}
+    \end{center}
+\end{table}
+
 \subsection{Use case diagram}
 
 \section{Domænemodel}
