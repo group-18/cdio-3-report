@@ -42,6 +42,94 @@ Følgende er en liste over use cases samt deres beskrivelser i en brief udgave.
     \end{center}
 \end{table}
 
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{ | p{15cm} |}
+            \hline
+            \textbf{Use case:} Fleet: Not owned, no intention to buy \\ \hline
+            \textbf{ID:} UC2 \\ \hline
+            \textbf{Brief description} I tilfælde af at spiller/-e lander på et felt som hverken ejes eller har intention om at købe.     \\ \hline
+            \textbf{Primary actors:} Spiller/-e \\ \hline
+            \textbf{Secondary actors:} Ingen. \\ \hline
+            \textbf{Preconditions:}
+            \\- Navn på spillerer er registreret
+            \\- Terningerne er slået \\ \hline
+            \textbf{Main flow:}
+            \begin{enumerate}
+                \item \textbf{Spiller lander på felt.}
+                \item \textbf{Med udgangspunkt i brugerinteraktion med GUI, afgører spiller hvorledes der ønskes, at købe felt eller springe over.}
+                \item \textbf{I denne usecase, takker spiller nej til køb af felt.}
+            \end{enumerate} \\ \hline
+            \textbf{Postconditions:} Spillet fortsætter og turen går til næste spiller.\\ \hline
+            \textbf{Alternative flow:}
+            \\- UC3: Fleet: Owned
+            \\- UC4: Fleet: Not owned, intention to buy\\ \hline
+            \hline
+        \end{tabular}
+        \caption{Use case 2}
+        \label{usecase:2}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{ | p{15cm} |}
+            \hline
+            \textbf{Use case:} Fleet: Owned \\ \hline
+            \textbf{ID:} UC3 \\ \hline
+            \textbf{Brief description} I tilfælde af at spiller/-e lander på et felt som er ejet.    \\ \hline
+            \textbf{Primary actors:} Spiller/-e \\ \hline
+            \textbf{Secondary actors:} Ingen. \\ \hline
+            \textbf{Preconditions:}
+            \\- Navn på spillerer er registreret
+            \\- Terningerne er slået \\ \hline
+            \textbf{Main flow:}
+            \begin{enumerate}
+                \item \textbf{Spiller lander på felt.}
+                \item \textbf{Spillet fremviser vha. GUI detaljer om feltet til spiller, herunder om feltet er ejet, og af hvem samt det beløb der skal trækkes fra den berørte spillers pengebeholdning.}
+                \item \textbf{Der bliver trukket i spillerens pengebeholdning, undtagelsesvis hvis spillers pengebeholdning går i minus, og erklæres hermed bankerot.}
+            \end{enumerate} \\ \hline
+            \textbf{Postconditions:} Spillet fortsætter og turen går til næste spiller.\\ \hline
+            \textbf{Alternative flow:}
+            \\- UC2: Fleet: Fleet: Not owned, no intention to buy
+            \\- UC4: Fleet: not owned, intention to buy.\\ \hline
+            \hline
+        \end{tabular}
+        \caption{Use case 3}
+        \label{usecase:3}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{ | p{15cm} |}
+            \hline
+            \textbf{Use case:} Fleet: Not owned, intention to buy \\ \hline
+            \textbf{ID:} UC4 \\ \hline
+            \textbf{Brief description} I tilfælde af at spiller/-e lander på et felt som ikke ejes, men har intention om at købe.    \\ \hline
+            \textbf{Primary actors:} Spiller/-e \\ \hline
+            \textbf{Secondary actors:} Ingen. \\ \hline
+            \textbf{Preconditions:}
+            \\- Navn på spillerer er registreret
+            \\- Terningerne er slået \\ \hline
+            \textbf{Main flow:}
+            \begin{enumerate}
+                \item \textbf{Spiller lander på felt.}
+                \item \textbf{Med udgangspunkt i brugerinteraktion med GUI, afgører spiller hvorledes der ønskes, at købe felt eller springe over.}
+                \item \textbf{I denne usecase, takker spiller ja til køb af felt.}
+                \item \textbf{Der bliver trukket i spillerens pengebeholdning, undtagelsesvis hvis spillers pengebeholdning går i minus, og erklæres hermed bankerot.}
+            \end{enumerate} \\ \hline
+            \textbf{Postconditions:} Spiller tildeles købt felt, spillet fortsætter og turen går til næste spiller.\\ \hline
+            \textbf{Alternative flow:}
+            \\- UC2: Fleet: Not owned, no intention to buy
+            \\- UC3: Fleet: Owned.\\ \hline
+            \hline
+        \end{tabular}
+        \caption{Use case 4}
+        \label{usecase:4}
+    \end{center}
+\end{table}
+
 \subsection{Use case diagram}
 
 \section{Domænemodel}
