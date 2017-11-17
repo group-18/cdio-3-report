@@ -7,3 +7,35 @@
 \section{Sekvens diagram}
 
 \section{Flowdiagram}
+\begin{center}
+\begin{tikzpicture}[node distance=2cm]
+    \node (start) [startstop] {Spillet startes};
+    \node (kast) [process, below of=start] {Terningerne kastes};
+    \node (passeres) [decision, below of=kast] {Passeres start?};
+    \node (ejendom) [decision, below of=passeres, yshift=-1cm] {Er feltet en ejendom?};
+    \node (chance) [decision, below of=ejendom, yshift=-1cm] {Er feltet chance?};
+    \node (stash) [decision, left of = chance, xshift =-1cm] {Stash \begin{math}
+        \geq
+    \end{math} ejendomsværdi};
+    \node (ejer) [decision, left of = ejendom, xshift = -1cm] {Ejes ejendommen?};
+    \node (koeb) [process, left of = ejer, xshift = -2.5cm] {Koeb ejendom};
+    \node (betal) [process, left of = passeres, xshift = -2cm] {Betal leje};
+    \node (penge) [process, right of = passeres, yshift =-1.9cm, xshift = 2cm] {Få penge};
+    \node (instrukser) [process, right of = chance, xshift=2cm] {Følg instrukser};
+    \node (slut) [startstop, left of = stash, xshift =-2.5cm] {Spillet sluttes}; 
+    \draw [arrow] (start) -- (kast);
+    \draw [arrow] (kast) -- (passeres);
+    \draw [arrow] (passeres) -| node[anchor=south] {Ja} (penge);
+    \draw [arrow] (passeres) -- node[anchor=west] {Nej}  (ejendom);
+    \draw [arrow] (penge) |- (ejendom);
+    \draw [arrow] (ejendom) -- node[anchor=south] {Ja} (stash);
+    \draw [arrow] (ejendom) -- node[anchor=west] {Nej} (chance);
+    \draw [arrow] (chance) -- node[anchor=south] {Ja} (instrukser);
+    \draw [arrow] (stash) --node[anchor=west] {Ja} (ejer);
+    \draw [arrow] (stash) --node[anchor=south] {Nej} (slut);
+    \draw [arrow] (ejer) --node[anchor=south] {Nej} (koeb);
+    \draw [arrow] (koeb) |- (kast);
+    \draw [arrow] (ejer) -- node[anchor=west] {Ja} (betal);
+    \draw [arrow] (betal) |- (kast);
+    \end{tikzpicture}
+\end{center}
