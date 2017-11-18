@@ -1,12 +1,12 @@
 \chapter{Design}
 
+I dette kapitel vil vi gennemgå spillet design, og vi vil vise et flow-, klasse- og system sekvensdiagram.
 
-
-\section{Klassediagram}
-
-\section{Sekvens diagram}
-
+\pagebreak
 \section{Flowdiagram}
+Indledningsvis tegnede vi et flowdiagram for at skabe overblik over projektet, så vi kunne forstå, hvordan spillet skulle udføres.
+Flowdiagrammet blev brugt som baggrund for de efterfølgende diagrammer, som bliver vist i projektet.
+
 \begin{center}
 \begin{tikzpicture}[node distance=2cm]
     \node (start) [startstop] {Spillet startes};
@@ -20,8 +20,8 @@
     \node (ejer) [decision, left of = ejendom, xshift = -1cm] {Ejes ejendommen?};
     \node (koeb) [process, left of = ejer, xshift = -2.5cm] {Koeb ejendom};
     \node (betal) [process, left of = passeres, xshift = -2cm] {Betal leje};
-    \node (penge) [process, right of = passeres, yshift =-1.9cm, xshift = 2cm] {Få penge};
-    \node (instrukser) [process, right of = chance, xshift=2cm] {Følg instrukser};
+    \node (penge) [process, right of = passeres, yshift =-1.9cm, xshift = 0.7cm] {Få penge};
+    \node (instrukser) [process, right of = chance, xshift=2.5cm] {Følg instrukser};
     \node (slut) [startstop, left of = stash, xshift =-2.5cm] {Spillet sluttes}; 
     \draw [arrow] (start) -- (kast);
     \draw [arrow] (kast) -- (passeres);
@@ -37,5 +37,12 @@
     \draw [arrow] (koeb) |- (kast);
     \draw [arrow] (ejer) -- node[anchor=west] {Ja} (betal);
     \draw [arrow] (betal) |- (kast);
+    \draw [arrow] (instrukser) |- (kast);
     \end{tikzpicture}
 \end{center}
+
+
+
+\section{Klassediagram}
+
+\section{Sekvens diagram}
