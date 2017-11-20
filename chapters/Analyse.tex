@@ -11,33 +11,107 @@ Herunder ses en liste over krav til spillet, udformet udfra opgavebeskrivelsen \
 
 \begin{enumerate}
 \item Spillet skal være en viderebygning på det tidligere udviklet spil fra CDIO 2.
-\item Man skal kunne spille 2-4 spillere.
-\item Der skal implementeres væsentlige elementer fra Monopoly Junior.
+\item Der skal implementeres væsentlige elementer fra regelsættet, der er givet.
 \item Der skal oprettes forskellige typer felter, samt en spilleplade.
 \item Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en udskrift om hvilket felt han ramte.
 \item Spillerne skal kunne lande på et felt, og fortsætte derfra på næste slag.
+
 \item Spillerne skal gå i ring rundt på felterne, på spillepladen, med uret. (man kan ikke gå mod uret)
 \item Spillet skal kunne køre på DTU's databar-computere.
+\item Man skal kunne spille 2-4 spillere.
 \item Den yngste spiller starter.
 \item Hver gang man passerer start, modtager man M2 (penge).
+
 \item Lander en spiller på et ledigt felt, køber spilleren feltet og har nu ejerskab af feltet.
 \item Lander en spiller på et eget felt, betaler denne spiller husleje til den spiller der ejer feltet.
 \item Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet.
 \item Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto.
 \item Lander en spiller på et "Gå i fængsel"-felt, flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start.
+
 \item Er en spiller i fængsel, kan man enten betale M1 (penge), eller bruge et chance-kort med løsladelses-mulighed. Mens man er i fængsel tjener man stadig leje.
 \item Lander en spiller på "Fængsel", sker der intet.
 \item Lander en spiller på "Gratis Parkering", sker der intet.
 \item Spillet sluttes, når en spiller ikke har penge nok til at betale husleje, betale en ejendom, eller negativ værdi på et chance-kort.
 \item Når spillet er slut, findes den der har flest penge, som så vinder. Har flere spillere samme antal penge, tælles alle ejede ejendomsværdi'er, og lægges til pengebeholdningen.
+
 \item (Avanceret) Hvis en spiller ikke har nok penge til at betale husleje eller en afgift fra et chancekort, skal gælden betales med dine ejendomme.
 \item (Avanceret) Hvis en spiller skylder penge til en anden spiller, får den spiller dine ejendomme, skylder man banken penge, bliver ejendommene sat til salg igen.
 \item (Avanceret) Hvis man skylder penge, og man ikke har nogen penge eller ejendomme, så er man fallit, og spillet slutter.
 \end{enumerate}
 
-\subsection{FURPS+ \& MoSCoW}
+\pagebreak
 
-\subsubsection{FURPS+}
+\subsection{MoSCoW}
+
+MoSCoW, er et værktøj som kan bruges til at prioritere krav.
+Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde.\footnote{MoSCoW tabellen der vises, er hentet fra tidligere CDIO2-rapport af samme gruppe.} \\\\
+
+\begin{tabular}{lll}
+    \textbf{Mo} &   
+    "Must have"                 &
+    De mest vitale krav, vi ikke kan undgå. \\
+
+    \textbf{S}  &   
+    "Should have"               & 
+    Vigtige krav, som ikke er vitale. \\
+
+    \textbf{Co} &   
+    "Could have"                & 
+    The 'nice-to-haves' \\
+
+    \textbf{W}  &   
+    "Won’t have (this time)"    & 
+    Things that provide little to no value you can give up on \\
+
+\end{tabular}
+\\\\
+
+\noindent Vi bruger herunder MoSCoW til at prioriterer vores krav, ved hjælp af MoSCoW.
+
+\begin{center}
+    \begin{tabular}{ | l | p{13cm} |}
+    \hline
+    \textbf{Must have}
+    &        
+        2. Man skal kunne spille 2-4 spillere.
+
+        4. Der skal oprettes forskellige typer felter, samt en spilleplade.
+        
+        6. Spillerne skal kunne lande på et felt, og fortsætte derfra på næste slag.
+        
+        8. Spillet skal kunne køre på DTU’s databar-computere.
+    \\
+    
+    \hline
+    \textbf{Should have}
+    &
+        1. Spillet skal være en viderebygning på det tidligere udviklet spil fra CDIO 2.
+
+        3. Der skal implementeres væsentlige elementer fra Monopoly Junior.
+
+        5. Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en ud-skrift om hvilket felt han ramte.
+
+        7. Spillerne skal gå i ring rundt på felterne, på spillepladen.
+    \\
+    \hline
+    \textbf{Could have}
+    &
+        9. Der skal implementeres med regler fra et rigtigt Monopoly Junior spil.
+    \\
+    \hline
+    \textbf{Won't have}
+    &
+
+    \\
+    \hline
+    \end{tabular}
+\end{center}
+
+\noindent Vi har ikke nogen krav der kan sættes i kategorien won't have.
+Dette felt bruges ofte til krav der bliver stillet fra kunden, som man ikke kan udføre, eller har svært ved pga. ressourcer eller lign.
+Der er selvfølgelig plads til videreudvikling i vores, hvilket ville ligge under won't have. 
+
+\subsection{FURPS+}
 
 FURPS+ er en metode til at kategorisere / klassificere krav. \\
 Vi har i denne opgave brugt FURPS+ metoden til at kategorisere de krav, som er udformet fra opgavebeskrivelsen.
@@ -99,80 +173,6 @@ Herunder ses et eksempel på FURPS+, og hvad de enkelte kategorier kan indeholde
 5. Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en udskrift om hvilket felt han ramte.
 
 \pagebreak
-
-\subsubsection{MoSCoW}
-
-MoSCoW, er et værktøj som kan bruges til at prioritere krav.
-Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde.\footnote{MoSCoW tabellen der vises, er hentet fra tidligere CDIO2-rapport af samme gruppe.} \\\\
-
-\begin{tabular}{lll}
-    \textbf{Mo} &   
-    "Must have"                 &
-    De mest vitale krav, vi ikke kan undgå. \\
-
-    \textbf{S}  &   
-    "Should have"               & 
-    Vigtige krav, som ikke er vitale. \\
-
-    \textbf{Co} &   
-    "Could have"                & 
-    The 'nice-to-haves' \\
-
-    \textbf{W}  &   
-    "Won’t have (this time)"    & 
-    Things that provide little to no value you can give up on \\
-
-\end{tabular}
-\\\\
-
-\noindent Vi her herunder en oversigt over krav til opgaven, prioriteret ved hjælp af MoSCoW.
-
-\begin{center}
-    \begin{tabular}{ | l | p{13cm} |}
-    \hline
-    \textbf{Must have}
-    &        
-        2. Man skal kunne spille 2-4 spillere.
-
-        4. Der skal oprettes forskellige typer felter, samt en spilleplade.
-        
-        6. Spillerne skal kunne lande på et felt, og fortsætte derfra på næste slag.
-        
-        8. Spillet skal kunne køre på DTU’s databar-computere.
-    \\
-    
-    \hline
-    \textbf{Should have}
-    &
-        1. Spillet skal være en viderebygning på det tidligere udviklet spil fra CDIO 2.
-
-        3. Der skal implementeres væsentlige elementer fra Monopoly Junior.
-
-        5. Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en ud-skrift om hvilket felt han ramte.
-
-        7. Spillerne skal gå i ring rundt på felterne, på spillepladen.
-    \\
-    \hline
-    \textbf{Could have}
-    &
-        9. Der skal implementeres med regler fra et rigtigt Monopoly Junior spil.
-    \\
-    \hline
-    \textbf{Won't have}
-    &
-
-    \\
-    \hline
-    \end{tabular}
-\end{center}
-
-\noindent Vi har ikke nogen krav der kan sættes i kategorien won't have.
-Dette felt bruges ofte til krav der bliver stillet fra kunden, som man ikke kan udføre, eller har svært ved pga. ressourcer eller lign.
-Der er selvfølgelig plads til videreudvikling i vores, hvilket ville ligge under won't have. 
-
-\pagebreak
-
-\input{chapters/FURPS-MoSCoW}
 
 \section{Interessentanalyse}
 
