@@ -4,41 +4,57 @@ I dette afsnit berører vi konfigurationen af programmet.
 En beskrivelse af de forskellige krav, samt nødvændige programmer for at køre systemet. 
 \\Dette inkluderer både kørsel af spillet, men også vedligeholdelse af programmet, med compiling, installation.
 Vi kommer samtidigt ind på hvorledes koden importeres fra et git repository.
-Konfigurationsstyring er delt op i to forskellige platforme.
+Konfigurationsstyring er delt op i to forskellige platforme. \\
 
-\section{Udviklingsplatformen}
+\subsubsection{Udviklingsplatformen}
 
-\subsubsection{Minimumskrav}
+I vores udviklingsplatform har vi brugt følgende software:
 
-Udviklingsplatformen har vi brugt intelliJ  IDEA er alt det software vi bruger under udviklingen af vores projekt.
+\noindent - Apple MacOS High Sierra \& Microsoft Windows 10 \\
+- IntelliJ - Version 2017.2.6 \\
+- JAVA (jre-8u151 \& jdk-9.0.1) \\
+- matadorgui.jar (Hentet via Maven)\footnote{$https://github.com/diplomit-dtu/Matador_GUI/raw/repository$}\\
 
-Herunder ses et minimumskrav til kørsel af JAVA 8, som programmet er programmeret i. Programmet køres også igennem en .jar fil\\
+\subsubsection{Produktionsplatformen}
+Produktionsplatformen er alt det software der skal bruges til at køre vores færdige program:
 
-\textbf{Windows}
-\\Windows Vista SP2, 7 SP1, 8.x (Desktop), 10 (8u51 and above)
-\\Windows Server Server 2012 \& 2012 RS2 (64bit)
-\\RAM: 128 MB, 
-\\Disk space: 124 MB for JRE; 2 MB for Java Update
-\\Processor: Minimum Pentium 2 266 MHz processor
-\\Browsers: Internet Explorer 9 and above, Firefox \\
+\noindent - Operativsystem der kan køre JAVA\\
+- JAVA (jre-8u151 \& jdk-9.0.1) \\
 
-\textbf{Mac OS X}
-\\Intel-based Mac running Mac OS X 10.8.3+, 10.9+
-\\Administrator privileges for installation
-\\64-bit browser (Safari, for example) is required to run Oracle Java on Mac. \\
+\noindent Skal man så videreudvikle på programmet skal man brug andre konfigurationer:\\
+\noindent - Apple MacOS High Sierra \& Microsoft Windows 10 \\
+- IntelliJ - Version 2017.2.6 (kan være anden IDE, dog er der medfølgende indstillinger i IntelliJ, som der er fordele i. \\
+- JAVA (jre-8u151 \& jdk-9.0.1) \\
+- matadorgui.jar (Hentet via Maven)\footnote{$https://github.com/diplomit-dtu/Matador_GUI/raw/repository$}\\
 
-\textbf{Linux}
-\\Oracle Linux 5.5+1, 6.x (32-/64-bit), 7.x(64-bit) (8u20 and above)
-\\Red Hat Enterprise Linux 5.5+1, 6.x (32-bit), 6.x (64-bit)2
-\\Red Hat Enterprise Linux 7.x (64-bit)2 (8u20 and above)
-\\Suse Linux Enterprise Server 10 SP2+, 11.x, 12.x (64-bit)2 (8u31 and above)
-\\Ubuntu Linux 12.04 LTS, 13.x, 14.x (8u25 and above)
-\\Ubuntu Linux 15.04 (8u45 and above), 15.10 (8u65 and above)
-\\Browsers: Firefox \\
 
-\section{Produktionsplatformen}
+% \subsubsection{Minimumskrav}
 
-Produktionsplatformen er i vores projekt 
+% Udviklingsplatformen har vi brugt intelliJ  IDEA er alt det software vi bruger under udviklingen af vores projekt.
+% Herunder ses et minimumskrav til kørsel af JAVA 8, som programmet er programmeret i. Programmet køres også igennem en .jar fil\\
 
-\section{Vejledning}
+% \textbf{Windows}
+% \\Windows Vista SP2, 7 SP1, 8.x (Desktop), 10 (8u51 and above)
+% \\Windows Server Server 2012 \& 2012 RS2 (64bit)
+% \\RAM: 128 MB, 
+% \\Disk space: 124 MB for JRE; 2 MB for Java Update
+% \\Processor: Minimum Pentium 2 266 MHz processor
+% \\Browsers: Internet Explorer 9 and above, Firefox \\
 
+% \textbf{Mac OS X}
+% \\Intel-based Mac running Mac OS X 10.8.3+, 10.9+
+% \\Administrator privileges for installation
+% \\64-bit browser (Safari, for example) is required to run Oracle Java on Mac. \\
+
+% \textbf{Linux}
+% \\Oracle Linux 5.5+1, 6.x (32-/64-bit), 7.x(64-bit) (8u20 and above)
+% \\Red Hat Enterprise Linux 5.5+1, 6.x (32-bit), 6.x (64-bit)2
+% \\Red Hat Enterprise Linux 7.x (64-bit)2 (8u20 and above)
+% \\Suse Linux Enterprise Server 10 SP2+, 11.x, 12.x (64-bit)2 (8u31 and above)
+% \\Ubuntu Linux 12.04 LTS, 13.x, 14.x (8u25 and above)
+% \\Ubuntu Linux 15.04 (8u45 and above), 15.10 (8u65 and above)
+% \\Browsers: Firefox \\
+
+\subsubsection{\textcolor{red}{Vejledning}}
+
+\textcolor{red}{Endvidere skal i beskrive hvordan man importerer jeres projekt i Eclipse fra git, og hvordan man kører jeres program.}
