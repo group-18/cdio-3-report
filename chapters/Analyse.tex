@@ -7,23 +7,21 @@ I dette kapitel vil vi gennemgå kravspecifikation til programmet, samt optegne 
 
 Herunder ses en liste over krav til spillet, udformet udfra opgavebeskrivelsen \& det udleverede regelsæt.\footnote{Enkelte krav er hentet fra tidligere CDIO2-rapport af samme gruppe.}
 
-\subsection{Alle krav stillet}
+\subsubsection{Alle krav stillet}
 
 \begin{enumerate}
-\item Spillet skal være en viderebygning på det tidligere udviklet spil fra CDIO 2.
-\item Der skal implementeres væsentlige elementer fra regelsættet, der er givet.
 \item Der skal oprettes forskellige typer felter, samt en spilleplade.
 \item Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en udskrift om hvilket felt han ramte.
 \item Spillerne skal kunne lande på et felt, og fortsætte derfra på næste slag.
 
 \item Spillerne skal gå i ring rundt på felterne, på spillepladen, med uret. (man kan ikke gå mod uret)
 \item Spillet skal kunne køre på DTU's databar-computere.
-\item Man skal kunne spille 2-4 spillere.
+\item 2-4 spillere skal kunne spille spillet.
 \item Den yngste spiller starter.
 \item Hver gang man passerer start, modtager man M2 (penge).
 
 \item Lander en spiller på et ledigt felt, køber spilleren feltet og har nu ejerskab af feltet.
-\item Lander en spiller på et eget felt, betaler denne spiller husleje til den spiller der ejer feltet.
+\item Lander en spiller på et ejet felt, betaler denne spiller husleje til den spiller der ejer feltet.
 \item Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet.
 \item Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto.
 \item Lander en spiller på et "Gå i fængsel"-felt, flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start.
@@ -36,12 +34,10 @@ Herunder ses en liste over krav til spillet, udformet udfra opgavebeskrivelsen \
 
 \item (Avanceret) Hvis en spiller ikke har nok penge til at betale husleje eller en afgift fra et chancekort, skal gælden betales med dine ejendomme.
 \item (Avanceret) Hvis en spiller skylder penge til en anden spiller, får den spiller dine ejendomme, skylder man banken penge, bliver ejendommene sat til salg igen.
-\item (Avanceret) Hvis man skylder penge, og man ikke har nogen penge eller ejendomme, så er man fallit, og spillet slutter.
+\item (Avanceret) Hvis man skylder penge, og man ikke har nogen penge eller ejendomme, så er man fallit, og spillet slutter.\\
 \end{enumerate}
 
-\pagebreak
-
-\subsection{MoSCoW}
+\subsubsection{MoSCoW}
 
 MoSCoW, er et værktøj som kan bruges til at prioritere krav.
 Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde.\footnote{MoSCoW tabellen der vises, er hentet fra tidligere CDIO2-rapport af samme gruppe.} \\\\
@@ -66,55 +62,158 @@ Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde
 \end{tabular}
 \\\\
 
+\pagebreak
+
 \noindent Vi bruger herunder MoSCoW til at prioriterer vores krav, ved hjælp af MoSCoW.
 
 \begin{center}
-    \begin{tabular}{ | l | p{13cm} |}
-    \hline
-    \textbf{Must have}
+    \begin{tabular}{ || c | l | p{11.5cm} ||}
+        \hline
+        \hline
     &        
-        2. Man skal kunne spille 2-4 spillere.
+    \textbf{1.}
+    &
+    Der skal oprettes forskellige typer felter, samt en spilleplade. \\
 
-        4. Der skal oprettes forskellige typer felter, samt en spilleplade.
-        
-        6. Spillerne skal kunne lande på et felt, og fortsætte derfra på næste slag.
-        
-        8. Spillet skal kunne køre på DTU’s databar-computere.
-    \\
+    \cline{2-3}
+    &
+    \textbf{2.}
+    & 
+    Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en udskrift om hvilket felt han ramte. \\
+    
+    \cline{2-3}
+    &
+    \textbf{3.}
+    &
+    Spillerne skal kunne lande på et felt, og fortsætte derfra på næste slag. \\
+
+    \cline{2-3}
+    &
+    \textbf{4.}
+    &
+    Spillerne skal gå i ring rundt på felterne, på spillepladen, med uret. (man kan ikke gå mod uret) \\
+
+    \cline{2-3}
+    &
+    \textbf{5.} 
+    &
+    Spillet skal kunne køre på DTU’s databar-computere. \\
+    
+    \cline{2-3}
+    \textbf{Must have}
+    &
+    \textbf{6.}
+    &
+    2-4 spillere skal kunne spille spillet. \\
+    
+    \cline{2-3}
+    &
+    \textbf{9.}
+    &
+    Lander en spiller på et ledigt felt, køber spilleren feltet og 
+    har nu ejerskab af feltet. \\
+
+    \cline{2-3}
+    &
+    \textbf{10.}
+    &
+    Lander en spiller på et ejet felt, betaler denne spiller husleje til den spiller der ejer feltet. \\
+
+    \cline{2-3}
+    &
+    \textbf{17.}
+    &
+    Spillet sluttes, når en spiller ikke har penge nok til at betale husleje, betale en ejendom, eller negativ værdi på et chance-kort. \\
+
+    \cline{2-3}
+    &
+    \textbf{18.}
+    &
+    Når spillet er slut, findes den der har flest penge, som så vinder. Har flere spillere samme antal penge, tælles alle ejede ejendomsværdi’er, og lægges til pengebeholdningen. \\
     
     \hline
+    \hline
+     % ------- %
+    &
+    \textbf{12.}
+    &
+    Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto. \\
+    
+    \cline{2-3}
     \textbf{Should have}
     &
-        1. Spillet skal være en viderebygning på det tidligere udviklet spil fra CDIO 2.
-
-        3. Der skal implementeres væsentlige elementer fra Monopoly Junior.
-
-        5. Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en ud-skrift om hvilket felt han ramte.
-
-        7. Spillerne skal gå i ring rundt på felterne, på spillepladen.
-    \\
-    \hline
-    \textbf{Could have}
+    \textbf{15.}
     &
-        9. Der skal implementeres med regler fra et rigtigt Monopoly Junior spil.
-    \\
+    Lander en spiller på "Fængsel", sker der intet. \\
+    
+    \cline{2-3}
+    &
+    \textbf{16.}
+    &
+    Lander en spiller på "Gratis Parkering", sker der intet. \\
     \hline
+    \hline
+     % ------- %
+     &
+     \textbf{8.}
+     &
+     Hver gang man passerer start, modtager man M2 (penge). \\
+     
+     \cline{2-3}
+     \textbf{Could have}
+     &
+     \textbf{11.}
+     &
+     Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet. \\
+
+    \hline
+    \hline
+    % ------- %
+    &
+    \textbf{7.}
+    &
+    Den yngste spiller starter. \\
+    
+    \cline{2-3}
+    &
+    \textbf{13.}
+    &
+    Lander en spiller på et "Gå i fængsel-felt", flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start. \\
+
+    \cline{2-3}
+    &
+    \textbf{14.}
+    &
+    Er en spiller i fængsel, kan man enten betale M1 (penge), eller bruge et chance-kort med løsladelses-mulighed. Mens man er i fængsel tjener man stadig leje. \\
+
+    \cline{2-3}
     \textbf{Won't have}
     &
+    \textbf{19.}
+    &
+    (Avanceret) Hvis en spiller ikke har nok penge til at betale husleje eller en afgift fra et chancekort, skal gælden betales med dine ejendomme.    \\
 
+    \cline{2-3}
+    &
+    \textbf{20.}
+    &
+    (Avanceret) Hvis en spiller skylder penge til en anden spiller, får den spiller dine ejendomme, skylder man banken penge, bliver ejendommene sat til salg igen.    \\
+
+    \cline{2-3}
+    &
+    \textbf{21.}
+    &
+    (Avanceret) Hvis man skylder penge, og man ikke har nogen penge eller ejendomme, så er man fallit, og spillet slutter.
     \\
+    \hline
     \hline
     \end{tabular}
 \end{center}
 
-\noindent Vi har ikke nogen krav der kan sættes i kategorien won't have.
-Dette felt bruges ofte til krav der bliver stillet fra kunden, som man ikke kan udføre, eller har svært ved pga. ressourcer eller lign.
-Der er selvfølgelig plads til videreudvikling i vores, hvilket ville ligge under won't have. 
-
-\subsection{FURPS+}
+\subsubsection{FURPS+}
 
 FURPS+ er en metode til at kategorisere / klassificere krav. \\
-Vi har i denne opgave brugt FURPS+ metoden til at kategorisere de krav, som er udformet fra opgavebeskrivelsen.
+Vi har i denne opgave brugt FURPS+ metoden til at kategorisere de krav, som er prioriteret i MoSCoW analysen.
 Vi har ikke valgt at medtage alle FURPS+ punkterne, men medbragt dem der giver mening for opgaven. \\
 Herunder ses et eksempel på FURPS+, og hvad de enkelte kategorier kan indeholde.\footnote{FURPS+ tabellen der vises, er hentet fra tidligere CDIO2-rapport af samme gruppe.}
 
@@ -157,20 +256,117 @@ Herunder ses et eksempel på FURPS+, og hvad de enkelte kategorier kan indeholde
 \end{tabular}}
 \end{figure*}
 
-\noindent Vi her herunder en oversigt over krav til opgaven, kategoriseret ved hjælp af FURPS+.
+\pagebreak
+
+\noindent Vi her herunder en oversigt over krav til opgaven, \\ kategoriseret ved hjælp af FURPS+. Der er ikke medtaget de krav der er i "Won't have" kategorien i MoSCoW-analysen.
 \\\\\textbf{Functionality:}\\
-1. Spillet skal være en viderebygning på det tidligere udviklet spil fra CDIO 2.
-6. Spillerne skal kunne lande på et felt, og fortsætte derfra på næste slag.
-4. Der skal oprettes forskellige typer felter, samt en spilleplade.
-5. Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en udskrift om hvilket felt han ramte.
-9. Der skal implementeres med regler fra et rigtigt Monopoly Junior spil.
+    \textbf{7.} Den yngste spiller starter. \\
+    \textbf{8.} Hver gang man passerer start, modtager man M2 (penge). \\
+    \textbf{9.} Lander en spiller på et ledigt felt, køber spilleren feltet og har nu ejerskab af feltet. \\
+    \textbf{10.} Lander en spiller på et ejet felt, betaler denne spiller husleje til den spiller der ejer feltet. \\
+    \textbf{11.} Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet. \\
+    \textbf{12.} Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto. \\
+    \textbf{13.} Lander en spiller på et "Gå i fængsel-felt", flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start. \\
+    \textbf{14.} Er en spiller i fængsel, kan man enten betale M1 (penge), eller bruge et chance-kort med løsladelses-mulighed. Mens man er i fængsel tjener man stadig leje. \\
+    \textbf{15.} Lander en spiller på "Fængsel", sker der intet. \\
+    \textbf{16.} Lander en spiller på "Gratis Parkering", sker der intet. \\
+    \textbf{17.} Spillet sluttes, når en spiller ikke har penge nok til at betale husleje, betale en ejendom, eller negativ værdi på et chance-kort. \\
+    \textbf{18.} Når spillet er slut, findes den der har flest penge, som så vinder. Har flere spillere samme antal penge, tælles alle ejede ejendomsværdi’er, og lægges til pengebeholdningen.
 \\\\\textbf{Usability:}\\
-2. Man skal kunne spille 2-4 spillere.
-\\\\\textbf{(+) - Implementation:}\\
-8. Spillet skal kunne køre på DTU's databar-computere.
+    \textbf{6.} 2-4 spillere skal kunne spille spillet.
 \\\\\textbf{(+) - Interface:}\\
-7. Spillerne skal gå i ring rundt på felterne, på spillepladen.
-5. Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en udskrift om hvilket felt han ramte.
+    \textbf{1.} Der skal oprettes forskellige typer felter, samt en spilleplade. \\
+    \textbf{2.} Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en udskrift om hvilket felt han ramte. \\
+    \textbf{3.} Spillerne skal kunne lande på et felt, og fortsætte derfra på næste slag. \\
+    \textbf{4.} Spillerne skal gå i ring rundt på felterne, på spillepladen, med uret. (man kan ikke gå mod uret)
+\\\\\textbf{(+) - Operations:}\\
+    \textbf{5.} Spillet skal kunne køre på DTU’s databar-computere. \\
+
+    \pagebreak
+\subsubsection{Implementerede krav}
+
+Herunder ses de krav, der ved hjælp af MoSCoW er blevet udvalgt til at blive implementeret i programmet. \\
+
+\begin{tabular}{| l |p{13cm}|}
+
+    \hline
+    \textbf{1.} 
+    &
+    Der skal oprettes forskellige typer felter, samt en spilleplade. \\
+    \hline
+    \textbf{2.} 
+    &
+    Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en udskrift om hvilket felt han ramte. \\
+    \hline
+    \textbf{3.} 
+    &
+    Spillerne skal kunne lande på et felt, og fortsætte derfra på næste slag. \\
+    \hline
+    \textbf{4.} 
+    &
+    Spillerne skal gå i ring rundt på felterne, på spillepladen, med uret. 
+    
+    (man kan ikke gå mod uret) \\
+    \hline
+    \textbf{5.} 
+    &
+    Spillet skal kunne køre på DTU’s databar-computere. \\
+    \hline
+    \textbf{6.} 
+    &
+    2-4 spillere skal kunne spille spillet. \\
+    \hline
+    \textbf{7.} 
+    &
+    Den yngste spiller starter. \\
+    \hline
+    \textbf{8.}
+    &
+    Hver gang man passerer start, modtager man M2 (penge). \\
+    \hline
+    \textbf{9.}
+    &
+    Lander en spiller på et ledigt felt, køber spilleren feltet og har nu ejerskab af feltet. \\
+    \hline
+    \textbf{10.}
+    &
+    Lander en spiller på et ejet felt, betaler denne spiller husleje til den spiller der ejer feltet. \\
+    \hline
+    \textbf{11.}
+    &
+    Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet. \\
+    \hline
+    \textbf{12.}
+    &
+    Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto. \\
+    \hline
+    \textbf{13.}
+    &
+    Lander en spiller på et "Gå i fængsel-felt", flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start. \\
+    \hline
+    \textbf{14.}
+    &
+    Er en spiller i fængsel, kan man enten betale M1 (penge), eller bruge et chance-kort med løsladelses-mulighed. Mens man er i fængsel tjener man stadig leje. \\
+    \hline
+    \textbf{15.}
+    &
+    Lander en spiller på "Fængsel", sker der intet. \\
+    \hline
+    \textbf{16.}
+    &
+    Lander en spiller på "Gratis Parkering", sker der intet. \\
+    \hline
+    \textbf{17.}
+    &
+    Spillet sluttes, når en spiller ikke har penge nok til at betale husleje, betale en ejendom, eller negativ værdi på et chance-kort. \\
+    \hline
+    \textbf{18.}
+    &
+    Når spillet er slut, findes den der har flest penge, som så vinder. 
+    
+    Har flere spillere samme antal penge, tælles alle ejede ejendomsværdi’er, og lægges til pengebeholdningen. \\
+    \hline
+\end{tabular}
 
 \pagebreak
 
@@ -309,7 +505,7 @@ Følgende er en liste over use cases samt deres beskrivelser i en fully dressed 
 
 \newpage
 
-\subsection{Use case diagram}
+\subsubsection{Use case diagram}
 Use cases bliver lavet for at skabe overblik over det kommende program.
 Ligeledes har vi valgt at inddrage et use case-diagram for at illustrere, hvordan det ser ud for vores program.
 Use case-diagrammet er meget beskedent, idet der kun er én aktør, nemlig spilleren, som kun kan gøre én ting, nemlig at spille spillet.
