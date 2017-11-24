@@ -19,6 +19,7 @@ Herunder ses en liste over krav til spillet, udformet udfra opgavebeskrivelsen \
 \item 2-4 spillere skal kunne spille spillet.
 \item Den yngste spiller starter.
 \item Hver gang man passerer start, modtager man M2 (penge).
+\item Alt efter om der er 2, 3 eller 4 spillere, skal der gives forskellige penge.
 
 \item Lander en spiller på et ledigt felt, køber spilleren feltet og har nu ejerskab af feltet.
 \item Lander en spiller på et ejet felt, betaler denne spiller husleje til den spiller der ejer feltet.
@@ -108,26 +109,26 @@ Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde
     
     \cline{2-3}
     &
-    \textbf{9.}
+    \textbf{10.}
     &
     Lander en spiller på et ledigt felt, køber spilleren feltet og 
     har nu ejerskab af feltet. \\
 
     \cline{2-3}
     &
-    \textbf{10.}
+    \textbf{11.}
     &
     Lander en spiller på et ejet felt, betaler denne spiller husleje til den spiller der ejer feltet. \\
 
     \cline{2-3}
     &
-    \textbf{17.}
+    \textbf{18.}
     &
     Spillet sluttes, når en spiller ikke har penge nok til at betale husleje, betale en ejendom, eller negativ værdi på et chance-kort. \\
 
     \cline{2-3}
     &
-    \textbf{18.}
+    \textbf{19.}
     &
     Når spillet er slut, findes den der har flest penge, som så vinder. Har flere spillere samme antal penge, tælles alle ejede ejendomsværdi’er, og lægges til pengebeholdningen. \\
     
@@ -135,20 +136,20 @@ Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde
     \hline
      % ------- %
     &
-    \textbf{12.}
+    \textbf{13.}
     &
     Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto. \\
     
     \cline{2-3}
     \textbf{Should have}
     &
-    \textbf{15.}
+    \textbf{16.}
     &
     Lander en spiller på "Fængsel", sker der intet. \\
     
     \cline{2-3}
     &
-    \textbf{16.}
+    \textbf{17.}
     &
     Lander en spiller på "Gratis Parkering", sker der intet. \\
     \hline
@@ -162,7 +163,13 @@ Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde
      \cline{2-3}
      \textbf{Could have}
      &
-     \textbf{11.}
+     \textbf{9.}
+     &
+     Alt efter om der er 2, 3 eller 4 spillere, skal der gives forskellige penge. \\
+
+     \cline{2-3}
+     &
+     \textbf{12.}
      &
      Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet. \\
 
@@ -176,32 +183,32 @@ Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde
     
     \cline{2-3}
     &
-    \textbf{13.}
+    \textbf{14.}
     &
     Lander en spiller på et "Gå i fængsel-felt", flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start. \\
 
     \cline{2-3}
     &
-    \textbf{14.}
+    \textbf{15.}
     &
     Er en spiller i fængsel, kan man enten betale M1 (penge), eller bruge et chance-kort med løsladelses-mulighed. Mens man er i fængsel tjener man stadig leje. \\
 
     \cline{2-3}
     \textbf{Won't have}
     &
-    \textbf{19.}
+    \textbf{20.}
     &
     (Avanceret) Hvis en spiller ikke har nok penge til at betale husleje eller en afgift fra et chancekort, skal gælden betales med dine ejendomme.    \\
 
     \cline{2-3}
     &
-    \textbf{20.}
+    \textbf{21.}
     &
     (Avanceret) Hvis en spiller skylder penge til en anden spiller, får den spiller dine ejendomme, skylder man banken penge, bliver ejendommene sat til salg igen.    \\
 
     \cline{2-3}
     &
-    \textbf{21.}
+    \textbf{22.}
     &
     (Avanceret) Hvis man skylder penge, og man ikke har nogen penge eller ejendomme, så er man fallit, og spillet slutter.
     \\
@@ -261,14 +268,15 @@ Herunder ses et eksempel på FURPS+, og hvad de enkelte kategorier kan indeholde
 \noindent Vi her herunder en oversigt over krav til opgaven, \\ kategoriseret ved hjælp af FURPS+. Der er ikke medtaget de krav der er i "Won't have" kategorien i MoSCoW-analysen.
 \\\\\textbf{Functionality:}\\
     \textbf{8.} Hver gang man passerer start, modtager man M2 (penge). \\
-    \textbf{9.} Lander en spiller på et ledigt felt, køber spilleren feltet og har nu ejerskab af feltet. \\
-    \textbf{10.} Lander en spiller på et ejet felt, betaler denne spiller husleje til den spiller der ejer feltet. \\
-    \textbf{11.} Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet. \\
-    \textbf{12.} Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto. \\
-    \textbf{15.} Lander en spiller på "Fængsel", sker der intet. \\
-    \textbf{16.} Lander en spiller på "Gratis Parkering", sker der intet. \\
-    \textbf{17.} Spillet sluttes, når en spiller ikke har penge nok til at betale husleje, betale en ejendom, eller negativ værdi på et chance-kort. \\
-    \textbf{18.} Når spillet er slut, findes den der har flest penge, som så vinder. Har flere spillere samme antal penge, tælles alle ejede ejendomsværdi’er, og lægges til pengebeholdningen.
+    \textbf{9.} Alt efter om der er 2, 3 eller 4 spillere, skal der gives forskellige penge. \\
+    \textbf{10.} Lander en spiller på et ledigt felt, køber spilleren feltet og har nu ejerskab af feltet. \\
+    \textbf{11.} Lander en spiller på et ejet felt, betaler denne spiller husleje til den spiller der ejer feltet. \\
+    \textbf{12.} Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet. \\
+    \textbf{13.} Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto. \\
+    \textbf{16.} Lander en spiller på "Fængsel", sker der intet. \\
+    \textbf{17.} Lander en spiller på "Gratis Parkering", sker der intet. \\
+    \textbf{18.} Spillet sluttes, når en spiller ikke har penge nok til at betale husleje, betale en ejendom, eller negativ værdi på et chance-kort. \\
+    \textbf{19.} Når spillet er slut, findes den der har flest penge, som så vinder. Har flere spillere samme antal penge, tælles alle ejede ejendomsværdi’er, og lægges til pengebeholdningen.
 \\\\\textbf{Usability:}\\
     \textbf{6.} 2-4 spillere skal kunne spille spillet.
 \\\\\textbf{(+) - Interface:}\\
@@ -290,70 +298,91 @@ Herunder ses de krav, der ved hjælp af MoSCoW er blevet udvalgt til at blive im
     \textbf{1.} 
     &
     Der skal oprettes forskellige typer felter, samt en spilleplade. \\
+    
     \hline
     \textbf{2.} 
     &
     Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en udskrift om hvilket felt han ramte. \\
+    
     \hline
     \textbf{3.} 
     &
     Spillerne skal kunne lande på et felt, og fortsætte derfra på næste slag. \\
+    
     \hline
     \textbf{4.} 
     &
     Spillerne skal gå i ring rundt på felterne, på spillepladen, med uret. 
-    
+
     (man kan ikke gå mod uret) \\
+    
     \hline
     \textbf{5.} 
     &
     Spillet skal kunne køre på DTU’s databar-computere. \\
+    
     \hline
     \textbf{6.} 
     &
     2-4 spillere skal kunne spille spillet. \\
+      
     \hline
     \textbf{8.}
     &
     Hver gang man passerer start, modtager man M2 (penge). \\
+      
     \hline
     \textbf{9.}
     &
-    Lander en spiller på et ledigt felt, køber spilleren feltet og har nu ejerskab af feltet. \\
+    Alt efter om der er 2, 3 eller 4 spillere, skal der gives forskellige penge. \\
+      
     \hline
     \textbf{10.}
     &
-    Lander en spiller på et ejet felt, betaler denne spiller husleje til den spiller der ejer feltet. \\
+    Lander en spiller på et ledigt felt, køber spilleren feltet og har nu ejerskab af feltet. \\
+      
     \hline
     \textbf{11.}
     &
-    Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet. \\
+    Lander en spiller på et ejet felt, betaler denne spiller husleje til den spiller der ejer feltet. \\
+      
     \hline
     \textbf{12.}
     &
-    Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto. \\
+    Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet. \\
+      
     \hline
     \textbf{13.}
     &
-    Er en spiller i fængsel, kan man enten betale M1 (penge), eller bruge et chance-kort med løsladelses-mulighed. Mens man er i fængsel tjener man stadig leje. \\
+    Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto. \\
+      
     \hline
-    \textbf{15.}
+    \textbf{14.}
     &
-    Lander en spiller på "Fængsel", sker der intet. \\
+    Er en spiller i fængsel, kan man enten betale M1 (penge), eller bruge et chance-kort med løsladelses-mulighed. Mens man er i fængsel tjener man stadig leje. \\
+      
     \hline
     \textbf{16.}
     &
-    Lander en spiller på "Gratis Parkering", sker der intet. \\
+    Lander en spiller på "Fængsel", sker der intet. \\
+      
     \hline
     \textbf{17.}
     &
-    Spillet sluttes, når en spiller ikke har penge nok til at betale husleje, betale en ejendom, eller negativ værdi på et chance-kort. \\
+    Lander en spiller på "Gratis Parkering", sker der intet. \\
+      
     \hline
     \textbf{18.}
+    &
+    Spillet sluttes, når en spiller ikke har penge nok til at betale husleje, betale en ejendom, eller negativ værdi på et chance-kort. \\
+      
+    \hline
+    \textbf{19.}
     &
     Når spillet er slut, findes den der har flest penge, som så vinder. 
     
     Har flere spillere samme antal penge, tælles alle ejede ejendomsværdi’er, og lægges til pengebeholdningen. \\
+      
     \hline
 \end{tabular}
 
@@ -362,10 +391,12 @@ Herunder ses de krav, der ved hjælp af MoSCoW er blevet udvalgt til at blive im
 \section{Interessentanalyse}
 
     \begin{tabular}{ | l | p{13cm} |}
-    \hline
+      
+      \hline
     \textbf{Interresent} & \textbf{Interesse / Mål} \\ \hline
     Spiller/-e & Kunne styre et system, der styrer et spil mellem 2-4 personer, 
     hvor i der kastes en terning, og man ser resultatet af dette slag med det samme, herefter skal facevaluen af dette slag fortælle, hvilket felt spilleren landte på, derudover skal den kunne fortælle om feltet er ejet, eller om det er frit til at købe, således at man enten skal betale til en spiller, eller har mulighed for at købe grunden.\\ \hline
+      
     \hline
     \end{tabular}
 
