@@ -528,28 +528,23 @@ Følgende er en liste over use cases samt deres beskrivelser i en fully dressed 
 For at skabe et overblik over de risici, som kan forekomme i udviklingsprocessen, oprettes der en risicitabel, som fortæller om risicien, dens påvirkning (skala 1-10, hvor 1 er mindst, 10 er højest) samt påvirkningsgrad (samma skala). \\ \\
 Der er udelukkende blevet oprettet en risicitabel over udviklingsprocessen og altså ikke de forskellige use cases, hvilket man i den agile udviklingsmetode, Unified Process, normalvis ville gøre brug af, da man ønsker at lave de højstprioriterede use cases indledningsvis.
 
-\begin{tabular}{| l |l |l  | l |p{13cm}|}
+\begin{enumerate}
+    \item Problemer med GUI. \\
+    Påvirkning = 10\\ Sandsynlighed = 8.\\
+    Det er klart, at spillet skal se godt ud og ikke skal køre i kommandoprompt/terminal.
+    Vi arbejdede med GUI i CDIO2, men da der er kommet ny GUI, kan der også opstå nye problemer, derfor er det vigtigt at tage højde for dette i god tid og læse op på dokumentationen, om hvordan man bruger GUI'en.
+    \item Overtrædelse af deadline. \\
+    Påvirkning = 3\\ Sandsynlighed = 10.\\
+    Vi bruger Asana til at give hinanden lektier for og holde styr på, hvad vi mangler i projektet.
+    Vi har strategisk valgt at sætte os til at lave tingene i god tid, således vi kan tage højde for eventuelle problemer, og det er derfor ikke et stort problem, hvis deadline bliver overtrædt (i begyndelsen).
+    \item Problemer med design af kode. \\
+    Påvirkning = 7\\ Sandsynlighed = 8.\\
+    Ligesom i de foregående projekter, kan man hurtigt komme til at følge en vandfaldsmodel, idet man tegner en masse diagrammer, men så hænger det ikke sammen med, hvordan spillet rent faktisk kommer til at fungere.
+    Vi prøver til vores bedste evner at designe og kode parallelt.
+    
+\end{enumerate}
 
-    \hline
-        Nummer
-        &
-        Navn
-        &
-        Sandsynlighed
-        &
-        Beskrivelse
-        &
-        Påvirkning
-    \textbf{1.} 
-    &
-    GUI 
-    &
-    Problemer med implementering af GUI.
-    \hline
-    \textbf{2.} 
-    &
-    Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en udskrift om hvilket felt han ramte. \\
-\end{tabular}
+De ovenstående situationer er blevet skrevet op for at gøre os opmærksomme på de potentielle vanskeligheder i udviklingsprocessen.
 
 \subsubsection{Use case diagram}
 Use cases bliver lavet for at skabe overblik over det kommende program.
