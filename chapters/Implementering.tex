@@ -1,3 +1,20 @@
 \chapter{Implementering}
+Vi har i dette projekt taget udgangspunkt i CDIO2, som er det første projekt, hvor vi bl.a. virkelig har gjort brug af planlægningsværktøjet Asana og kommunikationsværktøjet Slack.
+I det her projekt var det nødvendigt for os at programmere, sideløbende med en analyse- og designfase.
+Det viste sig at være en kæmpe hjælp at have et klassediagram, mens man koder, fordi man på klassediagrammet har en idé om, hvordan koden skal se ud.
+\\
+Det er dog klart, at diagrammerne bliver ændret i løbet af kodningen, fordi det er irrationelt at tro, at uforudsete ting ikke kan forekomme.
+I 'Udviklingsmetoder til IT-Systemer' har vi altså lært ikke at følge en vandfaldsmodel, men en agil model, hvor projektet deles op i iterationer, som det vises i kapitlet \textit{Projektplanlægning.}.
+\\
+Vi har prøvet til vores bedste evner at følge GRASP-modellen, således vi får en en attraktiv low coupling og high cohesion.
 
 \section{Brugervejledning for programmet}
+Programmets brugerinterface er meget simpelt sat op, og guider brugeren nemt igennem hvad han/hun skal gøre.
+Når man starter programmet op, vil det åbne en GUI, hvor den vil starte med at spørge, hvor mange spillere, der skal spille spillet (spillet tager imod 2, 3 og 4 spillere).
+Dette indtaster brugeren og trykker herefter på ok, hvorefter spillet spørger om spiller 1's navn og ønsker derefter at vide, hvilken \textit{type} spiller, han/hun er.
+Det samme gør sig gældende for de næste spillere i samme rækkefølge.
+\\
+Spillet fortæller nu, at det er spiller 1's tur, hvorefter man skal trykke på knappen \textit{kast}, således at der kommer en visualisering af et terningekast og et tekstfelt med terningens værdi.
+Herefter vil programmet opdatere spillerens score, hvis altså han/hun har købt en grund eller skal betale leje, og give turen videre.
+Dette fortsætter programmet med, indtil der kun er én spiller med en positiv pengebeholdning.
+Brugeren kan desuden holde musen over de forskellige felter, for at få beskrivelsen af feltet, og dens leje.
