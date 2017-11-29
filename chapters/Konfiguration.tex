@@ -55,6 +55,17 @@ Produktionsplatformen er alt det software der skal bruges til at køre vores fæ
 % \\Ubuntu Linux 15.04 (8u45 and above), 15.10 (8u65 and above)
 % \\Browsers: Firefox \\
 
-\subsubsection{\textcolor{red}{Vejledning}}
+\newpage
+\section{Vejledning}
+Følgende procedure er målrettet et Eclipse miljø, taget i betragtning at projektet skal kunne iscenesættes i Eclipse. Samtidigt skal projektet importeres fra et GIT repository, hvor så en vejledning for dette følger i dette afsnit.\footnote{ Da CDIO3 er blot en revideret udgave af CDIO2, er der tale om en magen konfigurationsvejledning til den fundet i CDIO2, og som resultat, er følgende vejledning baseret på vejledningen fra CDIO2 rapporten.}\\
 
-\textcolor{red}{Endvidere skal i beskrive hvordan man importerer jeres projekt i Eclipse fra git, og hvordan man kører jeres program.}
+\noindent \textbf{Hente projekt fra repository, Git}\\
+Det er flere måder at hente et projekt fra et Git repository, hvor det i sidste ende afhænger af om man gør brug af en lokal installation eller web udgave af det omtalte Git klient. I vores tilfælde havde vi gjort brug af Github til håndtering af vores Git repository. Ved lokalisering af projektet på Github skal man blot klikke på ‘Clone or download’, herefter hentes en lokal kopi af det omtalte projekt. For at kunne åbne projektet i eksempelvis Eclipse, skal projektet blot importeres.\\
+
+\noindent \textbf{Compiling, installering og afvikling af kildekoden, Eclipse}\\
+Eftersom at projektet er tilgængelig på maskinen lokalt, skal man blot importerer projektet i Eclipse. Dette gøres ved at åbne Eclipse og lokaliserer menuen ‘File’ på menubjælken. Under ‘File’ klikkes derefter på ‘Import’, og typen ‘Projects from Folder or Archive’ vælges. Mappen der indeholder vores lokale Git kopi lokaliseres og sættes som kilde, og processen afsluttes vha. knappen ‘Finish’.\\
+
+\noindent \textbf{\textit{Processen ser som følger:}}\\
+\textit{File -> Import -> Projects from Folder or Archive -> Source: Git kopi -> Finish}\\
+
+\noindent For at kunne compile og afvikle programmet, skal man blot klikke på det ikon, der repræsenterer en trekant omringet af en grøn cirkel. Eventuelt kan man nøjes med at klikke lokaliserer menuen ‘Run’ på menubjælken.
