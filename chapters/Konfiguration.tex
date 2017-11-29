@@ -56,7 +56,7 @@ Produktionsplatformen er alt det software der skal bruges til at køre vores fæ
 % \\Browsers: Firefox \\
 
 \newpage
-\section{Vejledning}
+\section{Konfigurationsvejledning}
 Følgende procedure er målrettet et Eclipse miljø, taget i betragtning at projektet skal kunne iscenesættes i Eclipse. Samtidigt skal projektet importeres fra et GIT repository, hvor så en vejledning for dette følger i dette afsnit.\footnote{ Da CDIO3 er blot en revideret udgave af CDIO2, er der tale om en magen konfigurationsvejledning til den fundet i CDIO2, og som resultat, er følgende vejledning baseret på vejledningen fra CDIO2 rapporten.}\\
 
 \noindent \textbf{Hente projekt fra repository, Git}\\
@@ -69,3 +69,24 @@ Eftersom at projektet er tilgængelig på maskinen lokalt, skal man blot importe
 \textit{File -> Import -> Projects from Folder or Archive -> Source: Git kopi -> Finish}\\
 
 \noindent For at kunne compile og afvikle programmet, skal man blot klikke på det ikon, der repræsenterer en trekant omringet af en grøn cirkel. Eventuelt kan man nøjes med at klikke lokaliserer menuen ‘Run’ på menubjælken.
+\newpage
+\section{Vejlednig til eksport samt kørsel af program}
+Følgende er en vejledning til hvordan man compiler en såkaldt .jar file (java archive) ved brug af Eclipse. Resultatet vil da være en java fil der kan afvikles via eksempelvis terminal. Selve kildekoden pakkes ind i en .jar fil.\\
+
+\noindent Primært er der to måder at compile en runnable jar fil, enten ved brug af terminal/commando prompt eller via eksport funktionen i Eclipse. Vi vælger at tage udgangspunkt i det sidst nævnte, og vejledningen ser som følger:\\
+
+\subsection{Eksport af program}
+\begin{enumerate}   
+    \item Åbn projekt i Eclipse og lokaliserer menuen ‘File’ på menubjælken.
+    \item Vælg derefter eksport funktionen under menuen ‘File’.
+    \item Find ‘Java’ eksport konfigurationen, vælg derefter ‘Runnable JAR file’.
+    \item I det ny opstået vindue vælges opstarts konfigurationen, hvori der specificeres hvilken ’Java Application’ der skal opfattes som start.
+    \item I samme vindue vælges også sti for eksport destination. Derudover skal der også tages et valg i forhold til hvordan biblioteket skal behandles. 
+    \item Ved tryk på ‘Finish’ eksporter Eclipse med udgangspunkt i den valgte konfiguration projektet til en runnable jar fil.\\
+\end{enumerate}
+
+\subsection{Kørsel af program}
+\begin{enumerate}   
+    \item For at åbne/afvikle den tidligere eksporteret jar fil skal man blot køre programmet i terminal/commando prompt.
+    \item I terminalen skrives følgende: \textit{java -jar ‘navn på jar-fil‘.jar}.\\
+\end{enumerate}
