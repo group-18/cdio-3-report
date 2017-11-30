@@ -1,10 +1,10 @@
 \section{Dokumentation af kode}
 
 \subsubsection{Forklaring af Arv}
-bla bla bla
+I programmeringssprog betyder nedarvning, at en klasse udvider en anden klasse, den kan altså bruge dens metoder. Dette gør det mere overskueligt at holde styr på sine forskellige klasser, og det gør det også nemmere, da man ikke skal skrive alle de nedarvede metoder igen, for hver subklasse man vil oprette. Et eksempel på en nedarvning, er et fartøj. Her vil det være muligt at lave forskellige nedarvninger på denne superklasse, f.eks. køretøj og luftfartøj. Man kan altså bruge nedarvning når ens subklasser har en relation til superklassen. Et andet eksempel, som vi gennemgik i klassen, er personer på DTU. Dette kan jo opdeles i mange subklasser, da vi både har studerende og ansatte, derudover har vi nogle undergrene til de ansatte, der specificerer præcist hvad for en ansat de er, og hvilke rettigheder de skal have til systemet, alt efter hvilken ansat de er. Her er nedarvning perfekt, da man slipper for at skrive meget af den samme kode igen.
 
 \subsubsection{Forklaring af abstract}
-bla bla bla
+En abstract klasse er en klasse hvor man tillader at der er metoder der ikke bliver implementeret, med dette menes der at disse metoder vil blive implementeret i subklasserne, således at den abstrakte klasse sådan set bare sender metoden videre til den klasse, der kan håndtere den information, den bliver kaldt på. Et eksempel er her i vores CDIO3 rapport, benytter vi os af en abstract metode, der hedder runAction. Denne abstrakte metode ligger i vores superklasse Field, når man så kalder runAction på et objekt 'field', så vil den sende denne metode videre til den respektive subklasse, hvis felt den blev kaldt på. Det vil altså sige, at hvis den bliver kaldt på et HouseField, så vil metoden runAction blive kørt som runAction metoden i HouseField, hvorimod hvis den bliver kaldt på et PrisonField, så vil metoden runAction blive kørt som runAction metoden i PrisonField. Dette gør koden meget nem overskuelig, og nem at videreudvikle på, da man bare kan gå ind i de respektive metoder man vil ændre.
 
 \subsubsection{Fortæl hvad det hedder hvis alle fieldklasserne har en landOnField metode der gør noget forskelligt}
 bla bla bla
