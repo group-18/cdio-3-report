@@ -514,7 +514,7 @@ Herunder ses de krav, der ved hjælp af MoSCoW er blevet udvalgt til at blive im
       
       \hline
     \textbf{Interresent} & \textbf{Interesse / Mål} \\ \hline
-    Spiller/-e & Kunne styre et system, der styrer et spil mellem 2-4 personer, 
+    Spillere & Kunne styre et system, der styrer et spil mellem 2-4 personer, 
     hvor i der kastes en terning, og man ser resultatet af dette slag med det samme, herefter skal facevaluen af dette slag fortælle, hvilket felt spilleren landte på, derudover skal den kunne fortælle om feltet er ejet, eller om det er frit til at købe, således at man enten skal betale til en spiller, eller har mulighed for at købe grunden.
     \\ 
     \hline
@@ -522,14 +522,33 @@ Herunder ses de krav, der ved hjælp af MoSCoW er blevet udvalgt til at blive im
     \hline
     \end{tabular}
 
+\section{Use case diagram}
+Use cases bliver lavet for at skabe overblik over det kommende program.
+Ligeledes har vi valgt at inddrage et use case-diagram for at illustrere, hvordan det ser ud for vores program.
+Use case-diagrammet er meget beskedent, idet der kun er én aktør, nemlig spilleren, som kun kan gøre én ting, nemlig at spille spillet.
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=10cm]{graphics/usecases/UseCase1.png}
+        \caption{Use case diagram}
+        \label{fig:use_case_diagram}
+    \end{center}
+\end{figure}
 
-\newpage
+\pagebreak
 
 \section{Use case}
+\subsection{Brief}
+Spillet starter med en dropdown menu hvorpå der angives antallet af deltagende spillerer.
+Efterfølgende indtastes navn på spillerene og efterfulgt af endnu en dropdown menu med det formål at vælge den yngste spiller.
+Før spillets start tildeles de hver en pengebeholdning.
+Den yngste spiller starter og kaster derved med terningen.
+Terningen øje eller faceValue tages og bruges som udgangspunkt til bergening af hvor mange felter spilleren skal flytte sig.
+På GUI'en vises feltets oplysninger, samt hvorvidt det er ejet eller ej.
+Der slås igen med terningen, spilleren lander på et felt, og et bestemt scenarie tages i brug, afhængig af felt oplysningerne, hvor så samme procedure følger indtil en spiller ærklæres bankerot.
+Der tælles point på spillerne, og spilleren med den største pengebeholdning vinder spillet.\\
 
-Følgende er en liste over use cases samt deres beskrivelser i en fully dressed udgave.
-
-%\footnote{Use case modellen i tabel 3.1 er en revideret udgave af use case modellen fra CDIO 1 da vi har at gøre med en magen til konfiguration.}
+\subsection{Fully dressed}
+Følgende er en beskrivelse af use casen 'playGame' i en fully dressed udgave.
 
 \begin{table}[H]
     \begin{center}
@@ -537,111 +556,47 @@ Følgende er en liste over use cases samt deres beskrivelser i en fully dressed 
             \hline
             \textbf{Use case:} PlayGame \\ \hline
             \textbf{ID:} UC1 \\ \hline
-            \textbf{Brief description} Spiller/-e skal kunne spille spil/Game (starte spillet) og slå med to terninger     \\ \hline
-            \textbf{Primary actors:} Spiller/-e \\ \hline
+            \textbf{Brief description} Spillere skal kunne spille spillet, altså playGame og slå med en terning.     \\ \hline
+            \textbf{Primary actors:} Spillere \\ \hline
             \textbf{Secondary actors:} Ingen. \\ \hline
-            \textbf{Preconditions:} Ingen.     \\ \hline
+            \textbf{Preconditions:}      \\ \hline
             \textbf{Main flow:}
             \begin{enumerate}
-                \item \textbf{Antal Spillere indtastes (minimum 2 og maksimum 6 Spillere) og tildeles 30.000 i pengebeholdning.}
-                \item \textbf{Spillere slår med to terninger, lander på et felt mellem 1-21 og bliver udefra det tildelt en opdateret pengebeholdning.}
-                \item \textbf{Spillet slutter når én spiller går bankerot}
+                \item \textbf{Spillet startes, antal spillere vælges (minimum 2 og maksimum 4 spillere) samt indtaster deres navn. Den yngste spiller specificeres, og er den første der slår med terningen.}
+                \item \textbf{Spillet flytter spilleren afhængig af faceValue fra terningen.}
+                \item \textbf{Feltets oplysninger udskrives til spilleren via GUI.}
+                \item \textbf{Ny runde finder sted, og næste spiller kaster med terningen.}
+                \item \textbf{Spillet giver nye ture indtil at en af spillerens pengebeholdning går i minus eller ikke har råd til købe/betaling af ejendom.}
+                \item \textbf{Går en spillers pengebeholdning i minus, erklæres hermed spilleren bankerot, og spillet slutter}
             \end{enumerate} \\ \hline
             \textbf{Postconditions:} Ingen.\\ \hline
-            \textbf{Alternative flow:} Ingen.\\ \hline
+            \textbf{Alternative flow:}
+            \begin{enumerate}
+                \item \textbf{Spiller lander på ikke ejet felt}
+                \begin{enumerate}
+                    \item {Spiller køber felt.}
+                    \item {Spiller bliver tildelt felt.}
+                \end{enumerate}
+                \item \textbf{Spiller lander på ejet felt}
+                \begin{enumerate}
+                    \item {Spiller betaler ejeren af felt. Har ejeren mere end et felt, betales dobbelt beløb.}
+                    \item {Ejer modtager beløb.}                    
+                \end{enumerate}
+                \item \textbf{Spiller passerer start felt}
+                \begin{enumerate}
+                    \item {Spiller får adderet 2M i sin pengebeholdning.}
+                \end{enumerate}
+                \item \textbf{Spiller lander på fængsel felt}
+                \begin{enumerate}
+                    \item {Spiller flyttes til fængsel feltet.}
+                    \item {Spiller modtager ikke 2M ved passering af start feltet.}
+                    \item {Spiller betaler 1M efter løsladelse fra fængsel, eller ved brug af 'Du løslades uden omkostninger' kortet.}
+                \end{enumerate}
+            \end{enumerate} \\ \hline
             \hline
         \end{tabular}
         \caption{Use case 1}
         \label{usecase:1}
-    \end{center}
-\end{table}
-
-\iffalse
-\begin{table}[H]
-    \begin{center}
-        \begin{tabular}{ | p{15cm} |}
-            \hline
-            \textbf{Use case:} Fleet: Not owned, no intention to buy \\ \hline
-            \textbf{ID:} UC2 \\ \hline
-            \textbf{Brief description} I tilfælde af at spiller/-e lander på et felt som hverken ejes eller har intention om at købe.     \\ \hline
-            \textbf{Primary actors:} Spiller/-e \\ \hline
-            \textbf{Secondary actors:} Ingen. \\ \hline
-            \textbf{Preconditions:}
-            \\- Navn på Spillere er registreret
-            \\- Terningerne er slået \\ \hline
-            \textbf{Main flow:}
-            \begin{enumerate}
-                \item \textbf{Spiller lander på felt.}
-                \item \textbf{Med udgangspunkt i brugerinteraktion med GUI, afgører spiller hvorledes der ønskes, at købe felt eller springe over.}
-                \item \textbf{I denne usecase, takker spiller nej til køb af felt.}
-            \end{enumerate} \\ \hline
-            \textbf{Postconditions:} Spillet fortsætter og turen går til næste spiller.\\ \hline
-            \textbf{Alternative flow:}
-            \\- UC3: Fleet: Owned
-            \\- UC4: Fleet: Not owned \\ \hline
-            \hline
-        \end{tabular}
-        \caption{Use case 2}
-        \label{usecase:2}
-    \end{center}
-\end{table}
-\fi
-
-\begin{table}[H]
-    \begin{center}
-        \begin{tabular}{ | p{15cm} |}
-            \hline
-            \textbf{Use case:} Fleet: Owned \\ \hline
-            \textbf{ID:} UC2 \\ \hline
-            \textbf{Brief description} I tilfælde af at spiller/-e lander på et felt som er ejet.    \\ \hline
-            \textbf{Primary actors:} Spiller/-e \\ \hline
-            \textbf{Secondary actors:} Ingen. \\ \hline
-            \textbf{Preconditions:}
-            \\- Navn på Spillere er registreret
-            \\- Terningerne er slået \\ \hline
-            \textbf{Main flow:}
-            \begin{enumerate}
-                \item \textbf{Spiller lander på felt.}
-                \item \textbf{Spillet fremviser vha. GUI detaljer om feltet til spiller, herunder om feltet er ejet, og af hvem samt det beløb der skal trækkes fra den berørte spillers pengebeholdning.}
-                \item \textbf{Der bliver trukket i spillerens pengebeholdning, undtagelsesvis hvis spillers pengebeholdning går i minus, og erklæres hermed bankerot.}
-            \end{enumerate} \\ \hline
-            \textbf{Postconditions:} Spillet fortsætter og turen går til næste spiller.\\ \hline
-            \textbf{Alternative flow:}
-            %\\- UC2: Fleet: Fleet: Not owned, no intention to buy
-            \\- UC3: Fleet: Not owned \\ \hline
-            \hline
-        \end{tabular}
-        \caption{Use case 2}
-        \label{usecase:2}
-    \end{center}
-\end{table}
-
-\begin{table}[H]
-    \begin{center}
-        \begin{tabular}{ | p{15cm} |}
-            \hline
-            \textbf{Use case:} Fleet: Not owned \\ \hline
-            \textbf{ID:} UC3 \\ \hline
-            \textbf{Brief description} I tilfælde af at spiller/-e lander på et felt som ikke ejes, men har intention om at købe.    \\ \hline
-            \textbf{Primary actors:} Spiller/-e \\ \hline
-            \textbf{Secondary actors:} Ingen. \\ \hline
-            \textbf{Preconditions:}
-            \\- Navn på Spillere er registreret
-            \\- Terningerne er slået \\ \hline
-            \textbf{Main flow:}
-            \begin{enumerate}
-                \item \textbf{Spiller lander på felt.}
-                \item \textbf{Da feltet ikke ejes, tvinges spilleren til køb af felt.}
-                \item \textbf{Der bliver trukket i spillerens pengebeholdning, undtagelsesvis hvis spillers pengebeholdning går i minus, og erklæres hermed bankerot.}
-            \end{enumerate} \\ \hline
-            \textbf{Postconditions:} Spiller tildeles købt felt, spillet fortsætter og turen går til næste spiller.\\ \hline
-            \textbf{Alternative flow:}
-            %\\- UC2: Fleet: Not owned, no intention to buy
-            \\- UC2: Fleet: Owned.\\ \hline
-            \hline
-        \end{tabular}
-        \caption{Use case 3}
-        \label{usecase:3}
     \end{center}
 \end{table}
 
@@ -667,20 +622,6 @@ Der er udelukkende blevet oprettet en risicitabel over udviklingsprocessen og al
 \end{enumerate}
 
 De ovenstående situationer er blevet skrevet op for at gøre os opmærksomme på de potentielle vanskeligheder i udviklingsprocessen.
-
-\subsubsection{Use case diagram}
-Use cases bliver lavet for at skabe overblik over det kommende program.
-Ligeledes har vi valgt at inddrage et use case-diagram for at illustrere, hvordan det ser ud for vores program.
-Use case-diagrammet er meget beskedent, idet der kun er én aktør, nemlig spilleren, som kun kan gøre én ting, nemlig at spille spillet.
-\begin{figure}[H]
-    \begin{center}
-        \includegraphics[width=10cm]{graphics/usecases/UseCase1.png}
-        \caption{Use case diagram}
-        \label{fig:use_case_diagram}
-    \end{center}
-\end{figure}
-
-\pagebreak
 
 \section{Domænemodel}
 
