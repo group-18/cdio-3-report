@@ -5,7 +5,7 @@ I dette kapitel vil vi gennemgå kravspecifikation til programmet, samt optegne 
 
 \section{Kravspecifikation}
 
-Herunder ses en liste over krav til spillet, udformet udfra opgavebeskrivelsen \& det udleverede regelsæt.\footnote{Enkelte krav er hentet fra tidligere CDIO2-rapport af samme gruppe.}
+Herunder ses en liste over krav til spillet, udformet udfra opgavebeskrivelsen og det udleverede regelsæt.\footnote{Enkelte krav er hentet fra tidligere CDIO2-rapport af samme gruppe.}
 
 \subsubsection{Alle krav stillet}
 
@@ -13,7 +13,7 @@ Herunder ses en liste over krav til spillet, udformet udfra opgavebeskrivelsen \
 \item Der skal oprettes forskellige typer felter, samt en spilleplade.
 \item Hvert felt skal påvirke spillernes pengebeholdning forskelligt, og have en udskrift om hvilket felt han ramte.
 \item Spillerne skal kunne lande på et felt, og fortsætte derfra på næste slag.
-\item Spillerne skal gå i ring rundt på felterne, på spillepladen, med uret. (man kan ikke gå mod uret)
+\item Spillerne skal gå i ring rundt på felterne, på spillepladen, med uret (man kan ikke gå mod uret)
 \item Spillet skal kunne køre på DTU's databar-computere.
 \item 2-4 spillere skal kunne spille spillet.
 \item Den yngste spiller starter.
@@ -24,15 +24,15 @@ Herunder ses en liste over krav til spillet, udformet udfra opgavebeskrivelsen \
 
 \item Lander en spiller på et ledigt felt, køber spilleren feltet og har nu ejerskab af feltet.
 \item Lander en spiller på et ejet felt, betaler denne spiller husleje til den spiller der ejer feltet.
-\item Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet.
+\item Ejer en spiller to ejendomme af samme farve er huslejen det dobbelte af det beløb, der står på feltet.
 
 \item Der skal være tydeligtgjort på spillebrættet hvilke ejede felter, som hører til hvilken spiller.
 
-\item Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto.
-\item Lander en spiller på et "Gå i fængsel"-felt, flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start.
+\item Lander en spiller på et chancefelt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto.
+\item Lander en spiller på et "Gå i fængsel-felt", flyttes spilleren til "Fængsel-feltet". Man får ikke M(penge) ved passage af start.
 
 \item Er en spiller i fængsel, kan man enten betale M1 (penge), eller bruge et chance-kort med løsladelses-mulighed. Mens man er i fængsel tjener man stadig leje.
-\item Lander en spiller på "Fængsel", sker der intet.
+\item Lander en spiller på "Fængsel-feltet", sker der intet.
 \item Lander en spiller på "Gratis Parkering", sker der intet.
 \item Spillet sluttes, når en spiller ikke har penge nok til at betale husleje, betale en ejendom, eller negativ værdi på et chance-kort.
 \item Når spillet er slut, findes den der har flest penge, som så vinder.
@@ -100,7 +100,7 @@ Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde
     &
     \textbf{4.}
     &
-    Spillerne skal gå i ring rundt på felterne, på spillepladen, med uret. (man kan ikke gå mod uret)
+    Spillerne skal gå i ring rundt på felterne, på spillepladen, med uret (man kan ikke gå mod uret)
     \\
 
     \cline{2-3}
@@ -146,7 +146,13 @@ Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde
     &
     Når spillet er slut, findes den der har flest penge, som så vinder.
     \\
+    \hline
+    \hline
+    \end{tabular}
+    \end{center}
     
+    \begin{center}
+        \begin{tabular}{ || p{2.5cm} | p{.4cm} | p{12.4cm} ||}
     \hline
     \hline
      % ------- % * Should have * % ------- %
@@ -160,22 +166,22 @@ Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde
      &
      \textbf{15.}
      &
-     Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto.
+     Lander en spiller på et chancefelt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto.
      \\
 
      \cline{2-3}
+     \textbf{Should have}
      &
      \textbf{16.}
      &
-     Lander en spiller på et "Gå i fængsel"-felt, flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start.
+     Lander en spiller på et "Gå i fængsel-felt", flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start.
      \\
     
      \cline{2-3}
-     \textbf{Should have}
      &
      \textbf{18.}
      &
-     Lander en spiller på "Fængsel", sker der intet. \\
+     Lander en spiller på "Fængsel-feltet", sker der intet. \\
     
      \cline{2-3}
      &
@@ -183,7 +189,13 @@ Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde
      &
      Lander en spiller på "Gratis Parkering", sker der intet. 
      \\
+     \hline
+     \hline
+        \end{tabular}
+    \end{center}
 
+     \begin{center}
+        \begin{tabular}{ || p{2.5cm} | p{.4cm} | p{12.4cm} ||}
      \hline
      \hline
      % ------- % * Could have * % ------- %
@@ -212,7 +224,7 @@ Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde
      &
      \textbf{13.}
      &
-     Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet.
+     Ejer en spiller to ejendomme af samme farve er huslejen det dobbelte af det beløb, der står på feltet.
      \\
 
      \cline{2-3}
@@ -221,7 +233,14 @@ Herunder ses et eksempel på MoSCoW, og hvad de enkelte kategorier kan indeholde
      &
      Er en spiller i fængsel, kan man enten betale M1 (penge), eller bruge et chance-kort med løsladelses-mulighed. Mens man er i fængsel tjener man stadig leje. 
      \\
+     \hline
+     \hline
 
+    \end{tabular}
+    \end{center}
+
+     \begin{center}
+        \begin{tabular}{ || p{2.5cm} | p{.4cm} | p{12.4cm} ||}
     \hline
     \hline
     % ------- % * Won't have * % ------- %
@@ -321,12 +340,12 @@ Herunder ses et eksempel på FURPS+, og hvad de enkelte kategorier kan indeholde
     \\
     \textbf{12.} Lander en spiller på et ejet felt, betaler denne spiller husleje til den spiller der ejer feltet. 
     \\
-    \textbf{13.} Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet. 
+    \textbf{13.} Ejer en spiller to ejendomme af samme farve er huslejen det dobbelte af det beløb, der står på feltet. 
     \\
-    \textbf{15.} Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto. 
+    \textbf{15.} Lander en spiller på et chancefelt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto. 
     \\
     \textbf{16.}
-    Lander en spiller på et "Gå i fængsel"-felt, flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start. 
+    Lander en spiller på et "Gå i fængsel-felt", flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start. 
     \\
     \textbf{17.}
     Er en spiller i fængsel, kan man enten betale M1 (penge), eller bruge et chance-kort med løsladelses-mulighed. Mens man er i fængsel tjener man stadig leje. 
@@ -348,7 +367,7 @@ Herunder ses et eksempel på FURPS+, og hvad de enkelte kategorier kan indeholde
     \\
     \textbf{3.} Spillerne skal kunne lande på et felt, og fortsætte derfra på næste slag. 
     \\
-    \textbf{4.} Spillerne skal gå i ring rundt på felterne, på spillepladen, med uret. (man kan ikke gå mod uret) 
+    \textbf{4.} Spillerne skal gå i ring rundt på felterne, på spillepladen, med uret (man kan ikke gå mod uret) 
     \\
     \textbf{7.} Den yngste spiller starter. 
 
@@ -437,7 +456,7 @@ Herunder ses de krav, der ved hjælp af MoSCoW er blevet udvalgt til at blive im
     \hline
     \textbf{13.}
     &
-    Ejer en spiller to egendomme af samme farve, er huslejen det dobbelte af det beløb, der står på feltet. 
+    Ejer en spiller to ejendomme af samme farve er huslejen det dobbelte af det beløb, der står på feltet. 
     \\
     
     \hline
@@ -449,13 +468,13 @@ Herunder ses de krav, der ved hjælp af MoSCoW er blevet udvalgt til at blive im
     \hline
     \textbf{15.}
     &
-    Lander en spiller på et chance felt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto. 
+    Lander en spiller på et chancefelt, skal der vises en beskrivelse af en hændelse, samt en værdi i plus eller minus på spillerens konto. 
     \\
 
     \hline
     \textbf{16.}
     &
-    Lander en spiller på et "Gå i fængsel"-felt, flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start. 
+    Lander en spiller på et "Gå i fængsel-felt", flyttes spilleren til "Fængsel". Man får ikke M(penge) ved passage af start. 
     \\
       
     \hline
@@ -501,8 +520,12 @@ Herunder ses de krav, der ved hjælp af MoSCoW er blevet udvalgt til at blive im
       
       \hline
     \textbf{Interresent} & \textbf{Interesse / Mål} \\ \hline
-    Spillere & Kunne styre et system, der styrer et spil mellem 2-4 personer, 
-    hvor i der kastes en terning, og man ser resultatet af dette slag med det samme, herefter skal facevaluen af dette slag fortælle, hvilket felt spilleren landte på, derudover skal den kunne fortælle om feltet er ejet, eller om det er frit til at købe, således at man enten skal betale til en spiller, eller har mulighed for at købe grunden.
+    Spillere
+    
+    &
+    
+    Kunne styre et system, der styrer et spil mellem 2-4 personer, 
+    hvor i der kastes en terning. Man ser resultatet af dette slag med det samme. Herefter skal værdien af terningen af dette slag bestemme, hvilket felt spilleren landede på, og fortælle om feltet er ejet, eller frit til at købe. Man ender med at betale til en spiller, eller betale for at købe den pågældende grund.
     \\ 
     \hline
       
@@ -543,7 +566,8 @@ Følgende er en beskrivelse af use casen 'playGame' i en fully dressed udgave.
             \hline
             \textbf{Use case:} PlayGame \\ \hline
             \textbf{ID:} UC1 \\ \hline
-            \textbf{Brief description} Spillere skal kunne spille spillet, altså playGame og slå med en terning.     \\ \hline
+            \textbf{Brief description} 
+            Spillere skal kunne spille spillet, altså playGame og slå med en terning.     \\ \hline
             \textbf{Primary actors:} Spillere \\ \hline
             \textbf{Secondary actors:} Ingen. \\ \hline
             \textbf{Preconditions:}      \\ \hline
@@ -556,6 +580,15 @@ Følgende er en beskrivelse af use casen 'playGame' i en fully dressed udgave.
                 \item \textbf{Spillet giver nye ture indtil at en af spillerens pengebeholdning går i minus eller ikke har råd til købe/betaling af ejendom.}
                 \item \textbf{Går en spillers pengebeholdning i minus, erklæres hermed spilleren bankerot, og spillet slutter}
             \end{enumerate} \\ \hline
+
+            \end{tabular}
+            \end{center}
+             \end{table}
+
+            \begin{table}[H]
+                \begin{center}
+                    \begin{tabular}{ | p{15cm} |}
+                        \hline
             \textbf{Postconditions:} Ingen.\\ \hline
             \textbf{Alternative flow:}
             \begin{enumerate}
@@ -589,7 +622,7 @@ Følgende er en beskrivelse af use casen 'playGame' i en fully dressed udgave.
 
 \newpage
 \section{Risicianalyse}
-For at skabe et overblik over de risici, som kan forekomme i udviklingsprocessen, oprettes der en risicitabel, som fortæller om risicien, dens påvirkning (skala 1-10, hvor 1 er mindst, 10 er højest) samt påvirkningsgrad (samma skala). \\ \\
+For at skabe et overblik over de risici, som kan forekomme i udviklingsprocessen, oprettes der en risicitabel, som fortæller om risicien, dens påvirkning (skala 1-10, hvor 1 er mindst, 10 er højest) samt påvirkningsgrad (samme skala). \\ \\
 Der er udelukkende blevet oprettet en risicitabel over udviklingsprocessen og altså ikke de forskellige use cases, hvilket man i den agile udviklingsmetode, Unified Process, normalvis ville gøre brug af, da man ønsker at lave de højstprioriterede use cases indledningsvis.
 
 \begin{enumerate}
@@ -608,7 +641,7 @@ Der er udelukkende blevet oprettet en risicitabel over udviklingsprocessen og al
     
 \end{enumerate}
 
-De ovenstående situationer er blevet skrevet op for at gøre os opmærksomme på de potentielle vanskeligheder i udviklingsprocessen.
+\noindent De ovenstående situationer er blevet skrevet op for at gøre os opmærksomme på de potentielle vanskeligheder i udviklingsprocessen.
 
 \section{Domænemodel}
 

@@ -20,7 +20,6 @@ Nedenstående uddrag af vores kode beskriver en unit test af getAmount() og star
         Assert.assertEquals(100, stash2.getAmount());
     }
 \end{lstlisting}
-\\
 Først oprettes stash1 af klassen Stash, og da den ikke initaliseres med en værdi, så forventer vi, at getAmount() returnerer en værdi på 0.
 Ligeledes når stash2 bliver oprettet, så bliver den intialiseret med 100, og derfor forventes der også en returværdi på 100, når getAmount() kaldes.
 
@@ -36,7 +35,7 @@ Monkey test (dansk: abetesten) er en black box test, hvor man sådan set bare pr
 Det er en smart metode til at finde fejl ved programmet, og vi har hyppigt brugt den, fundet fejl og undersøgt dem via debug-funktionen.
 
 \section{Testcases}
-Vi har udarbejdet en række test cases ud fra kravende som er specificeret i kapitel \ref{sec:requirements}.
+Vi har udarbejdet en række test cases ud fra kravende som er specificeret i kapitel 3.1.
 Disse test cases bekræfter at kravende er overholdt og programmet kan derfor godkendes bl.a. ud fra disse tests.
 
 \begin{table}[H]
@@ -146,9 +145,7 @@ Disse test cases bekræfter at kravende er overholdt og programmet kan derfor go
                 \item Adam lander på fængselsfeltet
             \end{enumerate} \\
             \hline
-            \textbf{Test data} & \begin{itemize}
-                \setlength\itemsep{0ex}
-            \end{itemize} \\
+            \textbf{Test data} & \\
             \hline
             \textbf{Expected result} & Spilleren fortsætter spillet uden at havne i fængsel. \\
             \hline

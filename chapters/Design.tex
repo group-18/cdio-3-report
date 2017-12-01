@@ -1,14 +1,12 @@
 \chapter{Design}
+I dette kapitel vil vi gennemgå spillets design, og vi vil vise et flow-, klasse- og system sekvensdiagram.
 
-I dette kapitel vil vi gennemgå spillet design, og vi vil vise et flow-, klasse- og system sekvensdiagram.
-
-\pagebreak
 \section{Flowdiagram}
 Indledningsvis tegnede vi et flowdiagram for at skabe overblik over projektet, så vi kunne forstå, hvordan spillet skulle udføres.
 Flowdiagrammet blev brugt som baggrund for de efterfølgende diagrammer, som bliver vist i projektet.
 
 \begin{center}
-\begin{tikzpicture}[node distance=2cm]
+\begin{tikzpicture}[node distance=1.20cm]
     \node (start) [startstop] {Spillet startes};
     \node (kast) [process, below of=start] {Terningerne kastes};
     \node (passeres) [decision, below of=kast] {Passeres start?};
@@ -26,7 +24,7 @@ Flowdiagrammet blev brugt som baggrund for de efterfølgende diagrammer, som bli
     \draw [arrow] (start) -- (kast);
     \draw [arrow] (kast) -- (passeres);
     \draw [arrow] (passeres) -| node[anchor=south] {Ja} (penge);
-    \draw [arrow] (passeres) -- node[anchor=west] {Nej}  (ejendom);
+    \draw [arrow] (passeres) -- node[anchor=east] {Nej}  (ejendom);
     \draw [arrow] (penge) |- (ejendom);
     \draw [arrow] (ejendom) -- node[anchor=south] {Ja} (stash);
     \draw [arrow] (ejendom) -- node[anchor=west] {Nej} (chance);
@@ -43,6 +41,17 @@ Flowdiagrammet blev brugt som baggrund for de efterfølgende diagrammer, som bli
 
 \section{Klassediagram}
 
+Herunder ses klassediagrammet for vores spil. \\
+Et computergenereret klassediagram, kan ses i bilag.
+
+\begin{figure}[H]
+    \begin{center}
+        \includegraphics[width=16cm]{graphics/FinalClassDiagram.png}
+        \caption{Klassediagram}
+        \label{fig:Class_diagram}
+    \end{center}
+\end{figure}
+
 \pagebreak
 
 \section{Systemsekvensdiagram}
@@ -50,7 +59,7 @@ Et systemsekvensdiagram viser typisk en form for simplificeret tidslinje over fl
 
 \begin{figure}[H]
     \begin{center}
-        \includegraphics[width=\columnwidth]{graphics/domain/SSD_Game3nw.png}
+        \includegraphics[width=13cm]{graphics/domain/SSD_Game3nw.png}
         \caption{Systemsekvensdiagram}
         \label{fig:systemsekvens_diagram}
     \end{center}
@@ -67,7 +76,7 @@ Efterfølgende er der ekstra tur, vha. 'next turn', hvilket slår igen med terni
 'Display winner' tæller point på spillerne, og spilleren med den største pengebeholdning vinder spillet, hvilket bliver vist på GUI.\\
 
 \section{Sekvensdiagram}
-\begin{figure}[H]
+\begin{figure}[h]
     \begin{center}
         \includegraphics[width=\columnwidth]{graphics/domain/SQdiagram.png}
         \caption{Sekvens diagram}
