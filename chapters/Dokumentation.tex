@@ -9,11 +9,12 @@ En abstract klasse er en klasse hvor man tillader at der er metoder der ikke bli
 \subsubsection{Fortæl hvad det hedder hvis alle fieldklasserne har en landOnField metode der gør noget forskelligt}
 Dette ville være en abstract metode, ligesom den vi har beskrevet ovenfor. En sådan abstract metode vil ikke blive implementeret i superklassen, det vil altså sige, at superklassens metode vil blot lyde på 'public abstract void landOnField(parameter)', hvor parameteret kan være f.eks. en spiller eller et game objekt. Herefter ville man så override metoden til alle subklasserne, og herefter implementerer hvad hvert felt skal gøre. Dermed vil den, når man kalder metoden på et felt, sende metoden videre til den respektive subklasse, hvis felt den blev kaldt på.
 
-\subsubsection{Dokumentation for test med screenshots}
-bla bla bla
-
 \subsubsection{Dokumentation for overholdt GRASP}
-bla bla bla
+GRASP er en række guidelines, man kan følge for at udvikle objektorienteret med bevidst klasseansvar. 
+Den inddeler klasser i funktioner såsom controller (tager imod inputs fra spiller) og creator (skaber objekter) samt henviser til, at man skal opnå lav kobling og høj samhørighed.
+\\
+Vi følger til dels GRASP-modellen, idet vi har fordelt ansvaret i mange klasser, som hver har deres ansvarsområde ekslusivt vores \textit{Controller}, Game-klassen, som også agerer som \textit{Creator}.\\
+En enkelt runde i køres som en metode playRound(), som er i en do-while-løkke, som kører, indtil en spiller er bankerot.
 
 \subsubsection{Java-doc}
 Vi bruger javadoc til at generere en dokumentation. Vores javadoc kan findes på \url{https://group-18.github.io/CDIO3/}, hvor næsten hver metode er blevet beskrevet.
