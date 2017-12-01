@@ -4,7 +4,7 @@ Black box test, også kendt som funktionel test, handler om, hvorvidt systemet f
 Det smarte ved denne test er, at man kender input og output og alt det der sker i systemet er sagen uvedkommende for testeren, og derfor kræver det ikke indblik i koden for at kunne black box teste.\\\\
 White box test, også kendt som strukturel test, handler derimod om, hvorvidt systemet fra et indre perspektiv opfører sig som forventet.
 Man vælger i white box test at have fokus på programmets logik og dette kan være med til at skabe en høj kodedækning, da man eksempelvis tester, om alle forgreninger kan udføres.
-\\Til vores program har vi valgt at lave tre typer tests; unittest, kodedækningstest og performancetest. 
+\\Til vores program har vi valgt at lave tre typer tests; unit test, kodedækningstest og monkey test.
 Det skal hertil nævnes, at der i projektet er blevet udført integrationstest, da vi ikke bare har valgt en \textit{big bang-approach} og først testet systemet til sidst.
 \section{Unit test}
 Unit test går i sin helhed ud på at teste de enkelte metoder i spillet, det er altså derfor en white box test. \\
@@ -19,21 +19,21 @@ Nedenstående uddrag af vores kode beskriver en unit test af getAmount() og star
         Assert.assertEquals(0, stash1.getAmount());
         Assert.assertEquals(100, stash2.getAmount());
     }
-    \\
 \end{lstlisting}
+\\
 Først oprettes stash1 af klassen Stash, og da den ikke initaliseres med en værdi, så forventer vi, at getAmount() returnerer en værdi på 0.
 Ligeledes når stash2 bliver oprettet, så bliver den intialiseret med 100, og derfor forventes der også en returværdi på 100, når getAmount() kaldes.
 
 \section{Coverage test}
-Vi testede spillet til at have en kodedækning på <INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT>, hvilket er godt til at, at vi kan acceptere det.
-Det er vigtigt at have et program med så høj kodedækning som muligt for at undgå død kode og evt. dårligt optimeret program.
-<INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT>
+Spillet er blevet kodedækket på to forskellige måder.
+Den første måde gik ud på, at vi kørte det normale spil med fire spillere, og vi fik kodedækningsprocent på: Klasser brugt = 100\%, metoder brugt = 78\%, linier brugt = 79\%.
+Vi var imidlertidigt ikke tilfredse med det her resultat, og vi kunne se, at den lave kodedækning til dels hang sammen med, at man simpelthen ikke nåede at bruge alle metoder.
+\\ Vi valgte derfor at ændre bankerot-værdien således, at man skulle have en beholdning på -500, før man tabte. Dette gjorde, at spillet kørte i langt længere tid, og resultatet endte med at blive: Klasser brugt = 100\%, metoder brugt = 85\%, linier brugt = 82\%.
+Dette resultat godtagede vi, fordi det viste sig, at mange af metoderne hang sammen med en ikke-implementeret metode, der hang sammen med typekortene, som i dette projekt er blevet udkommenteret.
 
-\section{Performancetest}
-Når man skriver et program er det vigtigt at have in mente, hvilket system der skal kunne køre programmet, altså det er specielt vigtigt at skrive et program med høj performance, hvis det skal bruges på et ressourcesvagt system.
-Ligeledes har vi lavet en performancetest af 'Monopoly-junior' for at tjekke ressourceforbruget.
-<INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT>
-
+\section{Monkey test}
+Monkey test (dansk: abetesten) er en black box test, hvor man sådan set bare prøver at taste en helt masse og 'stresse' spillet.
+Det er en smart metode til at finde fejl ved programmet, og vi har hyppigt brugt den, fundet fejl og undersøgt dem via debug-funktionen.
 
 \section{Testcases}
 <INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT>
