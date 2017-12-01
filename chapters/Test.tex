@@ -36,4 +36,175 @@ Monkey test (dansk: abetesten) er en black box test, hvor man sådan set bare pr
 Det er en smart metode til at finde fejl ved programmet, og vi har hyppigt brugt den, fundet fejl og undersøgt dem via debug-funktionen.
 
 \section{Testcases}
-<INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT><INDSÆT TEXT>
+Vi har udarbejdet en række test cases ud fra kravende som er specificeret i kapitel \ref{sec:requirements}.
+Disse test cases bekræfter at kravende er overholdt og programmet kan derfor godkendes bl.a. ud fra disse tests.
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|l|p{8cm}|}
+            \hline
+            \textbf{Unique ID} & TC1 \\
+            \hline
+            \textbf{Summary} & Kan programmet modtage de korrekte navne? \\
+            \hline
+            \textbf{Requirements} & \\
+            \hline
+            \textbf{Preconditions} & \\
+            \hline
+            \textbf{Postconditions} & \\
+            \hline
+            \textbf{Procedure} & \begin{enumerate}
+                \setlength\itemsep{0ex}
+                \item Start spillet
+                \item Indtast navnet "Adam" og tryk ok
+                \item Indtast navnet "Eva" og tryk ok
+            \end{enumerate} \\
+            \hline
+            \textbf{Test data} & \begin{itemize}
+                \setlength\itemsep{0ex}
+                \item Navn 1: Adam
+                \item Navn 2: Eva
+            \end{itemize} \\
+            \hline
+            \textbf{Expected result} & Spillerne er blevet oprettet med navn og vises på brættet \\
+            \hline
+            \textbf{Actual result} & Som forventet \\
+            \hline
+            \textbf{Status} & Godkendt \\
+            \hline
+            \textbf{Tested by} & Oliver Storm Køppen \\
+            \hline
+            \textbf{Date} & 1/12-2017 \\
+            \hline
+            \textbf{Environment} & IntelliJ on Win10 \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|l|p{8cm}|}
+            \hline
+            \textbf{Unique ID} & TC2 \\
+            \hline
+            \textbf{Summary} & Afsluttes spillet, når en spiller har en beholdning på <0? \\
+            \hline
+            \textbf{Requirements} & \\
+            \hline
+            \textbf{Preconditions} & To spillere er blevet oprettet og en af spillernes beholdning er på <0\\
+            \hline
+            \textbf{Postconditions} & Spillet afsluttes\\
+            \hline
+            \textbf{Procedure} & \begin{enumerate}
+                \setlength\itemsep{0ex}
+                \item Start spillet
+                \item Spillerne er oprettet
+                \item Spillet køres, indtil den ene spiller har en beholdning på <0
+            \end{enumerate} \\
+            \hline
+            \textbf{Test data} & \begin{itemize}
+                \setlength\itemsep{0ex}
+                \item Navn 1: "Adam"
+                \item Navn 2: "Eva"
+            \end{itemize} \\
+            \hline
+            \textbf{Expected result} & Adams er gået fallit. \\
+            \hline
+            \textbf{Actual result} & Som forventet \\
+            \hline
+            \textbf{Status} & Godkendt \\
+            \hline
+            \textbf{Tested by} & Oliver Storm Køppen \\
+            \hline
+            \textbf{Date} & 1/12-2017 \\
+            \hline
+            \textbf{Environment} & IntelliJ on Win10 \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|l|p{8cm}|}
+            \hline
+            \textbf{Unique ID} & TC3 \\
+            \hline
+            \textbf{Summary} & Ryger man i fængsel, hvis man har et fængselskort? \\
+            \hline
+            \textbf{Requirements} & Spiller er oprettet, og spilleren har et fængelskort\\
+            \hline
+            \textbf{Preconditions} & Spilleren er landet på fængselsfeltet\\
+            \hline
+            \textbf{Postconditions} & Spilleren kan spille videre uden at komme i fængsel\\
+            \hline
+            \textbf{Procedure} & \begin{enumerate}
+                \setlength\itemsep{0ex}
+                \item Start spillet
+                \item Indtast navnet "Adam" og tryk ok
+                \item Adam har modtaget et fængselskort
+                \item Adam lander på fængselsfeltet
+            \end{enumerate} \\
+            \hline
+            \textbf{Test data} & \begin{itemize}
+                \setlength\itemsep{0ex}
+            \end{itemize} \\
+            \hline
+            \textbf{Expected result} & Spilleren fortsætter spillet uden at havne i fængsel. \\
+            \hline
+            \textbf{Actual result} & Som forventet \\
+            \hline
+            \textbf{Status} & Godkendt \\
+            \hline
+            \textbf{Tested by} & Niklaes Jacobsen \\
+            \hline
+            \textbf{Date} & 30/11-2017 \\
+            \hline
+            \textbf{Environment} & IntelliJ on MacOS \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
+
+\begin{table}[H]
+    \begin{center}
+        \begin{tabular}{|l|p{8cm}|}
+            \hline
+            \textbf{Unique ID} & TC4 \\
+            \hline
+            \textbf{Summary} & Vil spillerens pengeholdning ændrer sig i korrespondance til feltets værdi? \\
+            \hline
+            \textbf{Requirements} & \\
+            \hline
+            \textbf{Preconditions} & TC1 og spilleren landet på et felt med værdi, som endnu ikke er ejet \\
+            \hline
+            \textbf{Postconditions} & Spillerens pengebeholdning er nu blevet mindre i relation til køb af felt\\
+            \hline
+            \textbf{Procedure} & \begin{enumerate}
+                \setlength\itemsep{0ex}
+                \item Start spillet
+                \item Spillere oprettes
+                \item Spilleren lander på Isbutikken
+            \end{enumerate} \\
+            \hline
+            \textbf{Test data} & \begin{itemize}
+                \setlength\itemsep{0ex}
+                \item Spillers startbeholdning er 20
+                \item Isbutikken: M2
+            \end{itemize} \\
+            \hline
+            \textbf{Expected result} & Spillernes pengebeholdning er nu 18\\
+            \hline
+            \textbf{Actual result} & Som forventet \\
+            \hline
+            \textbf{Status} & Godkendt \\
+            \hline
+            \textbf{Tested by} & Oliver Storm Køppen \\
+            \hline
+            \textbf{Date} & 1/12-2017 \\
+            \hline
+            \textbf{Environment} & IntelliJ on Win10 \\
+            \hline
+        \end{tabular}
+    \end{center}
+\end{table}
